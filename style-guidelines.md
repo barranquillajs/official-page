@@ -133,7 +133,7 @@ const foo(callback) {
 }
 ```
 
-### Enums for interrelated strings
+## Enums for interrelated strings
 
 Combine interrelated strings within a single **enum** value for easy track and reusability.
 
@@ -160,7 +160,7 @@ const foo(bar: Status, callback: () => void) {
 }
 ```
 
-### Array types
+## Array types
 
 Preferred as team consensus to use **generic array types** over **short hand square brackets** syntax.
 
@@ -182,7 +182,7 @@ type Element = {
 }
 ```
 
-### Avoid magic variables
+## Avoid magic variables
 
 Preferred to turn plain values into variables with a meaningful name.
 
@@ -205,7 +205,7 @@ setTimeout(() => {
 }, DISPLAY_HELLO_TIMEOUT)
 ```
 
-### Remove unnecessary comments
+## Remove unnecessary comments
 
 Preferred to remove commented code blocks which are not going to be used anymore.
 
@@ -229,7 +229,7 @@ const foo() {
 }
 ```
 
-### Avoid object “[key]: value” duplicity
+## Avoid object “[key]: value” duplicity
 
 This is recommended for situations where a variable has the same name as an object key, so we can reduce verbosity in the code.
 
@@ -251,7 +251,7 @@ const study = {
 }
 ```
 
-### Avoid `VoidFunction` type use `() ⇒ void` instead
+## Avoid `VoidFunction` type use `() ⇒ void` instead
 
 Preferred to use the `() ⇒ void` type for noop functions instead of `VoidFunction`
 
@@ -267,7 +267,7 @@ export const foo = (callback: VoidFunction) => {}
 export const foo = (callback: () => void) => {}
 ```
 
-### Define the styles at the top of the component definition
+## Define the styles at the top of the component definition
 
 ❌  **Don't**
 
@@ -312,7 +312,7 @@ export const Navbar = ({ className, onClick }: NavbarProps) => {
 };
 ```
 
-### Use always the word: “classes” to define the classes styles object
+## Use always the word: “classes” to define the classes styles object
 
 ❌  **Don't**
 
@@ -356,7 +356,7 @@ export const Navbar = ({ className, onClick }: NavbarProps) => {
 };
 ```
 
-### Define the styles using an Object that represents the anatomy of the component
+## Define the styles using an Object that represents the anatomy of the component
 
 In order to match the `classes` object with the component anatomy, use an object where each key matches with one component’s part.
 
@@ -384,7 +384,7 @@ export const Navbar = ({ ariaLabel, className }: NavbarProps) => {
 };
 ```
 
-### Define a function if you need to manage some classes dynamically
+## Define a function if you need to manage some classes dynamically
 
 In some cases, you will need to modified dynamically some classes depending on a component state or variable. To manage this kind of scenarios, assign a function which receive any amount of params in order to modify the classes.
 
