@@ -1,8 +1,14 @@
 {
   "root": true,
-  "ignorePatterns": ["**/*", "**/node_modules/**/*"],
+  "ignorePatterns": ["node_modules/**/*"],
   "plugins": ["prettier"],
-  "extends": ["plugin:prettier/recommended", "next/core-web-vitals"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "curly": ["error", "multi"],
     "max-params": ["error", 3],
@@ -15,7 +21,7 @@
       }
     ],
     "max-lines": ["error", 350],
-    "no-unused-vars": "off",
+    "no-unused-vars": "warn",
     "complexity": ["error", 7],
     "@typescript-eslint/no-unused-vars": [
       "error",
