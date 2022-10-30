@@ -33,6 +33,10 @@ module.exports = {
       },
       transparent: 'transparent',
     },
+    fontFamily: {
+      display: ['Fira Code'],
+      body: ['DM Sans'],
+    },
   },
   plugins: [],
 };
