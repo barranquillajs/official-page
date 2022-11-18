@@ -10,14 +10,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@makinox/makinox-ui": "^1.6.8",
-    "@next/font": "^13.0.0",
-    "classnames": "^2.3.2",
-    "next": "13.0.0",
+    "@makinox/makinox-ui": "1.6.8",
+    "@next/font": "13.0.3",
+    "classnames": "2.3.2",
+    "next": "13.0.3",
     "npm": "^8.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "4.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
