@@ -29,7 +29,7 @@ export default function Navbar() {
           <a className={classes.item} href="https://twitter.com/baq_js" target="_blank" rel="noreferrer">
             <FaTwitterSquare />
           </a>
-          <a className={classes.item} href="https://www.linkedin.com/groups/12717860/" target="_blank" rel="noreferrer">
+          <a className={classes.item} href="https://www.linkedin.com/company/89602992" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
         </div>

@@ -10,8 +10,12 @@ export default function Hero() {
       <div className="my-2 max-w-lg">
         <h1>Este es un grupo para todos los desarrolladores, entusiastas y apasionados por Javascript en Barranquilla y la costa.</h1>
         <div className="flex items-center my-2">
-          <button className={`${ButtonContained()} mr-4`}>Siguenos</button>
-          <button className={`${ButtonOutline()} px-4`}>Meetup</button>
+          <a href="https://www.linkedin.com/company/89602992" target="_blank" rel="noreferrer" className={`${ButtonContained()} mr-4`}>
+            Síguenos
+          </a>
+          <a href="https://www.meetup.com/es/barranquillajs" target="_blank" rel="noreferrer" className={`${ButtonOutline()} px-4`}>
+            Meetup
+          </a>
         </div>
       </div>
       <div>
