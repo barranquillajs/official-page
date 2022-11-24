@@ -4,6 +4,7 @@ import { FaTwitterSquare, FaLinkedin, FaWhatsapp, FaMeetup } from 'react-icons/f
 
 import { FluidContainer, TopBar } from '@makinox/makinox-ui';
 
+import { LINK_BARRANQUILLA_LINKEDIN, LINK_BARRANQUILLA_MEETUP, LINK_BARRANQUILLA_TWITTER, LINK_BARRANQUILLA_WHATSAPP } from '../../constants';
 import headerimage from '../../public/assets/BAQJS.png';
 
 export default function Navbar() {
@@ -20,16 +21,16 @@ export default function Navbar() {
         </div>
 
         <div className="flex">
-          <a className={classes.item} href="https://www.meetup.com/es/barranquillajs" target="_blank" rel="noreferrer">
+          <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer">
             <FaMeetup />
           </a>
-          <a className={classes.item} href="https://chat.whatsapp.com/Cgkiea91hbpH2kErkjrmxb" target="_blank" rel="noreferrer">
+          <a className={classes.item} href={LINK_BARRANQUILLA_WHATSAPP} target="_blank" rel="noreferrer">
             <FaWhatsapp />
           </a>
-          <a className={classes.item} href="https://twitter.com/baq_js" target="_blank" rel="noreferrer">
+          <a className={classes.item} href={LINK_BARRANQUILLA_TWITTER} target="_blank" rel="noreferrer">
             <FaTwitterSquare />
           </a>
-          <a className={classes.item} href="https://www.linkedin.com/company/89602992" target="_blank" rel="noreferrer">
+          <a className={classes.item} href={LINK_BARRANQUILLA_LINKEDIN} target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
         </div>
