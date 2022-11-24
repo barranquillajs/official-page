@@ -7,7 +7,7 @@ import imagePeople from '../../public/assets/BAQ-PEOPLE.jpeg';
 
 export default function Hero() {
   return (
-    <article className="flex items-center justify-around mt-12">
+    <article className="flex items-center justify-around md:flex-row flex-col-reverse mt-12">
       <div className="my-2 max-w-lg">
         <h1 className="text-2xl">
           Este es un grupo para todos los desarrolladores, entusiastas y apasionados por Javascript en Barranquilla y la costa.
