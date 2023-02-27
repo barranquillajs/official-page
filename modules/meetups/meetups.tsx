@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { Card, FluidContainer, ButtonContained } from '@makinox/makinox-ui';
 import { LINK_BARRANQUILLA_MEETUP, MEETUP_DATA } from '../../constants';
 
-export default function Meetups() {
+export const Meetups = () => {
   return (
     <section className={`flex flex-col justify-center ${FluidContainer}`}>
-      <div className="mb-2 my-14 w-full flex justify-center">
-        <h1 className="text-3xl font-display">Ultimos eventos</h1>
+      <div className="mb-2 pt-20 w-full flex justify-center">
+        <h1 className="text-3xl">Ultimos eventos</h1>
       </div>
       <div className="flex items-start justify-center lg:justify-between my-4 flex-wrap">
         {MEETUP_DATA.slice(0, 3).map((meetup) => (
@@ -30,7 +30,7 @@ export default function Meetups() {
         ))}
       </div>
       <div className="justify-center flex">
-        <button className={ButtonContained({ size: 'lg' })}>
+        <button className={ButtonContained()}>
           <a href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer">
             Ver más
           </a>
@@ -38,4 +38,4 @@ export default function Meetups() {
       </div>
     </section>
   );
-}
+};

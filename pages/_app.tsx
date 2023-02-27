@@ -7,7 +7,7 @@ import '../styles/globals.css';
 import '../styles/colors.css';
 
 const firaCode = Fira_Code({
-  weight: 'variable',
+  weight: '400',
 });
 
 const dmSans = DM_Sans({
@@ -15,7 +15,11 @@ const dmSans = DM_Sans({
 });
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} classname={cn(firaCode.className, dmSans.className)} />;
+  return (
+    <main className={cn(firaCode.className, dmSans.className)}>
+      <Component {...pageProps} />
+    </main>
+  );
 };
 
 export default MyApp;
