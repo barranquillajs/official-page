@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <article className={`flex items-center justify-between md:flex-row flex-col-reverse pt-12 ${FluidContainer}`}>
       <div className="my-2 max-w-lg">
-        <h1 className="text-4xl font-display">
+        <h1 className="text-4xl">
           Este es un grupo para todos los desarrolladores, entusiastas y apasionados por Javascript en Barranquilla y la costa.
         </h1>
         <div className="flex items-center my-2">
