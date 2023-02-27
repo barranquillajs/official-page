@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
-import { ButtonContained, ButtonOutline } from '@makinox/makinox-ui';
+import { ButtonContained, ButtonOutline, FluidContainer } from '@makinox/makinox-ui';
 
 import { LINK_BARRANQUILLA_LINKEDIN, LINK_BARRANQUILLA_MEETUP } from '../../constants';
 import imagePeople from '../../public/assets/BAQ-PEOPLE.jpeg';
 
 export default function Hero() {
   return (
-    <article className="flex items-center justify-around md:flex-row flex-col-reverse mt-12">
+    <article className={`flex items-center justify-between md:flex-row flex-col-reverse pt-12 ${FluidContainer}`}>
       <div className="my-2 max-w-lg">
-        <h1 className="text-2xl">
+        <h1 className="text-4xl">
           Este es un grupo para todos los desarrolladores, entusiastas y apasionados por Javascript en Barranquilla y la costa.
         </h1>
         <div className="flex items-center my-2">
