@@ -1,6 +1,6 @@
 import Header from '../components/header/header';
 import Hero from '../components/hero/hero';
-import { InfoSection, Meetups } from '../modules';
+import { InfoSection, Meetups, Sponsor } from '../modules';
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <Hero />
       <InfoSection />
       <Meetups />
+      <Sponsor />
     </section>
   );
 }
