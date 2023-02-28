@@ -1,2 +1,3 @@
-export * from './InfoSection/InfoSection';
+export * from './infoSection/infoSection';
 export * from './meetups/meetups';
+export * from './sponsors/sponsors';
