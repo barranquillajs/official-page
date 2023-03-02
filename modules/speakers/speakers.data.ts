@@ -1,12 +1,13 @@
 import jesusBossaSpeaker from '../../public/assets/speakers/JESUS-SPEAKER.jpeg';
+import luisPorrasSpeaker from '../../public/assets/speakers/LUIS-PORRAS-SPEAKER.jpeg';
 
 export const speakerData = [
   {
     name: 'Luis Alfredo Porras',
-    image: undefined,
-    page: undefined,
-    github: undefined,
-    linkedin: undefined,
+    image: luisPorrasSpeaker,
+    page: 'https://linktr.ee/lporras16',
+    github: 'https://github.com/lporras',
+    linkedin: 'https://www.linkedin.com/in/lporras/',
   },
   {
     name: 'Jesus David Bossa',
