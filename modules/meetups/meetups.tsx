@@ -12,7 +12,16 @@ export const Meetups = () => {
         {MEETUP_DATA.slice(0, 3).map((meetup) => (
           <article className={` m-2 cursor-pointer ${Card({ type: 'outlined' })}`} onClick={() => window.open(meetup.link)} key={meetup.title}>
             <div className="card-media w-96 h-56">
-              <Image className="object-cover" src={meetup.photo} fill alt={`BarranqullaJS: meetup`} />
+              <Image
+                className="object-cover"
+                src={meetup.photo}
+                fill
+                priority={false}
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                alt={`BarranqullaJS: meetup`}
+              />
             </div>
             <div className="card-header">
               <h6 className="headline6">{meetup.title}</h6>
@@ -20,7 +29,7 @@ export const Meetups = () => {
             <div className="card-body">
               <p className="body2">
                 {meetup.speakers.map((speaker, idx) => {
-                  const totalSpeakers = meetup.speakers.length;
+                  const totalSpeakers = meetup.speakers?.length;
                   if (idx + 1 === totalSpeakers) return <span key={speaker}>{speaker}</span>;
                   return <span key={speaker}>{speaker} - </span>;
                 })}

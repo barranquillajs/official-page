@@ -22,7 +22,7 @@ export const Hero = () => {
         </div>
       </div>
       <div>
-        <Image width={500} className="rounded-full" src={imagePeople} alt="Asistentes del meetup de barranquilla JS" />
+        <Image width={500} priority={true} className="rounded-full" src={imagePeople} alt="Asistentes del meetup de barranquilla JS" />
       </div>
     </article>
   );
