@@ -1,7 +1,7 @@
-import jesusBossaPhoto from '../../public/assets/PEOPLE/JESUS-BOSSA.jpeg';
-import jesusHernandezPhoto from '../../public/assets/PEOPLE/JESUS-HERNANDEZ.jpeg';
-import aldairMorenoPhoto from '../../public/assets/PEOPLE/ALDAIR-MORENO.jpeg';
-import luisPorrasPhoto from '../../public/assets/PEOPLE/LUIS-PORRAS.jpeg';
+import jesusBossaPhoto from '../public/assets/people/JESUS-BOSSA.jpeg';
+import jesusHernandezPhoto from '../public/assets/people/JESUS-HERNANDEZ.jpeg';
+import aldairMorenoPhoto from '../public/assets/people/ALDAIR-MORENO.jpeg';
+import luisPorrasPhoto from '../public/assets/people/LUIS-PORRAS.jpeg';
 
 export const staffData = [
   {

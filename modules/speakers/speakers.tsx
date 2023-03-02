@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import { ButtonContained, FluidContainer } from '@makinox/makinox-ui';
 
-import { speakerData } from './speakers.data';
+import { speakerData } from '../../constants';
 
 export const Speakers = () => {
   const [showAll, setShowAll] = useState(false);

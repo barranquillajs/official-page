@@ -1,4 +1,4 @@
-import { staffData } from '../staff/staff.data';
+import { staffData } from './staff';
 
 export const speakerData = [
   {

@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import { FluidContainer } from '@makinox/makinox-ui';
 
-import { staffData } from './staff.data';
+import { staffData } from '../../constants';
 
 export const Staff = () => {
   const classes = {
