@@ -1,27 +1,6 @@
-import jesusBossaSpeaker from '../../public/assets/speakers/JESUS-SPEAKER.jpeg';
+import { staffData } from '../staff/staff.data';
 
 export const speakerData = [
-  {
-    name: 'Luis Alfredo Porras',
-    image: undefined,
-    page: undefined,
-    github: undefined,
-    linkedin: undefined,
-  },
-  {
-    name: 'Jesus David Bossa',
-    image: jesusBossaSpeaker,
-    page: 'https://jesusbossa.dev/',
-    github: 'https://github.com/makinox',
-    linkedin: 'https://www.linkedin.com/in/makinox/',
-  },
-  {
-    name: 'Aldair Moreno Collazo',
-    image: undefined,
-    page: undefined,
-    github: undefined,
-    linkedin: undefined,
-  },
   {
     name: 'Gabriel Coronado Salas',
     image: undefined,
@@ -31,13 +10,6 @@ export const speakerData = [
   },
   {
     name: 'Víctor Barrios Álvarez',
-    image: undefined,
-    page: undefined,
-    github: undefined,
-    linkedin: undefined,
-  },
-  {
-    name: 'Jesus Hernandez',
     image: undefined,
     page: undefined,
     github: undefined,
@@ -64,6 +36,7 @@ export const speakerData = [
     github: undefined,
     linkedin: undefined,
   },
+
   {
     name: 'Edgardo Rodríguez',
     image: undefined,
@@ -78,6 +51,7 @@ export const speakerData = [
     github: undefined,
     linkedin: undefined,
   },
+  ...staffData,
   {
     name: 'Juan Camilo Torres',
     image: undefined,

@@ -12,6 +12,7 @@ export const Speakers = () => {
 
   const classes = {
     imageContainer: cn('flex justify-center p-2'),
+    imageWrapper: cn('flex bg-primary-100 w-32 h-32 justify-center items-center rounded-full'),
     link: cn('p-2'),
     icons: 20,
   };
@@ -28,14 +29,16 @@ export const Speakers = () => {
           const hasPhoto = speaker.image !== undefined;
 
           return (
-            <article className="relative flex flex-col justify-center bg-primary-100 w-40 min-h-40 rounded-lg m-4" key={speaker.name}>
+            <article className="relative flex flex-col justify-center border-2 border-primary-100 w-40 min-h-40 rounded-md m-4" key={speaker.name}>
               {hasPhoto ? (
                 <div className={classes.imageContainer}>
-                  <Image src={speaker.image} alt={`Charlista ${speaker.name}`} width={112} height={112} className="rounded-full" />
+                  <div className={classes.imageWrapper}>
+                    <Image src={speaker.image} alt={`Charlista ${speaker.name}`} width={112} height={112} className="rounded-full" />
+                  </div>
                 </div>
               ) : (
                 <div className={classes.imageContainer}>
-                  <div className="flex bg-base-white w-28 h-28 justify-center items-center rounded-full">
+                  <div className={classes.imageWrapper}>
                     <FaUserAlt size={40} />
                   </div>
                 </div>
