@@ -1,4 +1,5 @@
 import { staffData } from './staff';
+import juanMendozaPhoto from '../public/assets/people/JUAN-MENDOZA.jpeg';
 
 export const speakerData = [
   {
@@ -17,10 +18,10 @@ export const speakerData = [
   },
   {
     name: 'Juan Sebastian Mendoza',
-    image: undefined,
-    page: undefined,
-    github: undefined,
-    linkedin: undefined,
+    image: juanMendozaPhoto,
+    page: 'https://juansebastianm.github.io/portfolio/',
+    github: 'https://github.com/JuanSebastianM',
+    linkedin: 'https://www.linkedin.com/in/juan-sebastian-mendoza-perez/',
   },
   {
     name: 'Juan Pablo Calao',
