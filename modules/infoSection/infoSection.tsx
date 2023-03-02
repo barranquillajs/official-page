@@ -16,7 +16,7 @@ export const InfoSection = () => {
             Si siempre estamos buscando charlistas, por favor haz click en el siguiente link si quieres postular una charla
           </p>
           <div className="flex justify-center md:justify-start">
-            <a href="#" className={`${ButtonContained()} px-4`}>
+            <a href="https://github.com/barranquillajs/Meetups/issues" target="_blank" rel="noreferrer" className={`${ButtonContained()} px-4`}>
               Postular charla
             </a>
           </div>
@@ -25,7 +25,7 @@ export const InfoSection = () => {
           <h2 className={classes.title}>Haz parte de nuestros sponsors</h2>
           <p className={classes.parragraph}>Apoyanos, crezcamos juntos, mejoremos este parrafo para las empresas</p>
           <div className="flex justify-center md:justify-start">
-            <a href="#" className={ButtonContained()}>
+            <a href="mailto:barranquillajsx@gmail.com" target="_blank" rel="noreferrer" className={ButtonContained()}>
               Mas informacion
             </a>
           </div>

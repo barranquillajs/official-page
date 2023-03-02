@@ -1,5 +1,5 @@
-import sponsorUniBaq from '../../public/assets/sponsors/UNI-BAQ.jpg';
-import sponsorPayoneer from '../../public/assets/sponsors/PAYONEER.jpg';
+import sponsorUniBaq from '../public/assets/sponsors/UNI-BAQ.jpg';
+import sponsorPayoneer from '../public/assets/sponsors/PAYONEER.jpg';
 
 export const SPONSOR_LEVEL = {
   DIAMOND: { name: 'DIAMOND', width: 200 },
