@@ -5,7 +5,7 @@ import { ButtonContained, ButtonOutline, FluidContainer } from '@makinox/makinox
 import { LINK_BARRANQUILLA_LINKEDIN, LINK_BARRANQUILLA_MEETUP } from '../../constants';
 import imagePeople from '../../public/assets/BAQ-PEOPLE.jpeg';
 
-export default function Hero() {
+export const Hero = () => {
   return (
     <article className={`flex items-center justify-between md:flex-row flex-col-reverse pt-12 ${FluidContainer}`}>
       <div className="my-2 max-w-lg">
@@ -26,4 +26,4 @@ export default function Hero() {
       </div>
     </article>
   );
-}
+};
