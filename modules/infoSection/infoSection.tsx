@@ -16,7 +16,7 @@ export const InfoSection = () => {
             Si siempre estamos buscando charlistas, por favor haz click en el siguiente link si quieres postular una charla
           </p>
           <div className="flex justify-center md:justify-start">
-            <a href="https://github.com/barranquillajs/Meetups/issues" target="_blank" rel="noreferrer" className={`${ButtonContained()} px-4`}>
+            <a href="https://forms.gle/sjuHXjPZ28Rt7sfE6" target="_blank" rel="noreferrer" className={`${ButtonContained()} px-4`}>
               Postular charla
             </a>
           </div>
