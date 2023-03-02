@@ -7,7 +7,7 @@ export const MEETUP_DATA = [
   },
   {
     title: 'Micro-frontends y monorepos & Inglés avanzado de manera 100% autodidacta',
-    photo: 'https://secure.meetupstatic.com/photos/event/4/a/a/b/highres_507739115.jpeg',
+    photo: 'https://secure.meetupstatic.com/photos/event/4/a/a/c/highres_507739116.jpeg',
     link: 'https://www.meetup.com/es/barranquillajs/events/288619013/',
     speakers: ['Aldair Moreno Collazo', 'Gabriel Coronado Salas'],
   },
