@@ -8,8 +8,8 @@ export const staffData = [
     name: 'Luis Alfredo Porras',
     text: 'Senior Software Engineer in Runa',
     image: luisPorrasPhoto,
-    page: undefined,
-    github: undefined,
+    page: 'https://linktr.ee/lporras16',
+    github: 'https://github.com/lporras',
     linkedin: 'https://www.linkedin.com/in/lporras/',
   },
   {
