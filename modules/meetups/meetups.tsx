@@ -12,7 +12,7 @@ export const Meetups = () => {
         {MEETUP_DATA.slice(0, 3).map((meetup) => (
           <article className={` m-2 cursor-pointer ${Card({ type: 'outlined' })}`} onClick={() => window.open(meetup.link)} key={meetup.title}>
             <div className="card-media w-96 h-56">
-              <Image src={meetup.photo} fill alt={`BarranqullaJS: meetup`} />
+              <Image className="object-cover" src={meetup.photo} fill alt={`BarranqullaJS: meetup`} />
             </div>
             <div className="card-header">
               <h6 className="headline6">{meetup.title}</h6>

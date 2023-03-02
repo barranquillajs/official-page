@@ -7,9 +7,9 @@ import { FluidContainer, TopBar } from '@makinox/makinox-ui';
 import { LINK_BARRANQUILLA_LINKEDIN, LINK_BARRANQUILLA_MEETUP, LINK_BARRANQUILLA_TWITTER, LINK_BARRANQUILLA_WHATSAPP } from '../../constants';
 import headerimage from '../../public/assets/BAQJS.png';
 
-export default function Navbar() {
+export const Header = () => {
   const classes = {
-    item: cn('ml-1 text-primary-400 text-xl'),
+    item: cn('ml-1 text-primary-500 text-xl'),
   };
 
   return (
@@ -37,4 +37,4 @@ export default function Navbar() {
       </nav>
     </header>
   );
-}
+};

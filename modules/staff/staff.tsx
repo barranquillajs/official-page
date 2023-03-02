@@ -22,7 +22,7 @@ export const Staff = () => {
       <div className="flex justify-center md:justify-between flex-wrap mt-8">
         {staffData.map((staff) => {
           return (
-            <article key={staff.name} className="bg-primary-50 w-64 rounded-md">
+            <article key={staff.name} className="bg-primary-50 w-64 rounded-md m-4">
               <div>
                 <div className={classes.imageContainer}>
                   <div className={classes.imageWrapper}>
