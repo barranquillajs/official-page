@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import Image from 'next/image';
-import { FaTwitterSquare, FaLinkedin, FaWhatsapp, FaMeetup, FaInstagramSquare, FaTiktok } from 'react-icons/fa';
+import { FaTwitterSquare, FaLinkedin, FaWhatsapp, FaMeetup, FaInstagramSquare, FaTiktok, FaTwitch, FaYoutubeSquare } from 'react-icons/fa';
 
 import { FluidContainer, TopBar } from '@makinox/makinox-ui';
 
@@ -9,8 +9,10 @@ import {
   LINK_BARRANQUILLA_LINKEDIN,
   LINK_BARRANQUILLA_MEETUP,
   LINK_BARRANQUILLA_TIKTOK,
+  LINK_BARRANQUILLA_TWITCH,
   LINK_BARRANQUILLA_TWITTER,
   LINK_BARRANQUILLA_WHATSAPP,
+  LINK_BARRANQUILLA_YOUTUBE,
 } from '../../constants';
 import headerimage from '../../public/assets/BAQJS.png';
 
@@ -21,7 +23,7 @@ export const Header = () => {
 
   return (
     <header className={`${TopBar({ isDark: false })}`}>
-      <nav className={`flex justify-between items-center py-2 ${FluidContainer()} `}>
+      <nav className={`flex flex-col justify-center md:flex-row md:justify-between items-center py-2 ${FluidContainer()} `}>
         <div className="flex items-center">
           <Image className="rounded-md" src={headerimage} alt="BarranquillaJS logo" width={30} height={30} />
           <span className="ml-2">Barranquilla JS</span>
@@ -37,6 +39,9 @@ export const Header = () => {
           <a className={classes.item} href={LINK_BARRANQUILLA_TIKTOK} target="_blank" rel="noreferrer">
             <FaTiktok />
           </a>
+          <a className={classes.item} href={LINK_BARRANQUILLA_TWITCH} target="_blank" rel="noreferrer">
+            <FaTwitch />
+          </a>
           <a className={classes.item} href={LINK_BARRANQUILLA_TWITTER} target="_blank" rel="noreferrer">
             <FaTwitterSquare />
           </a>
@@ -45,6 +50,9 @@ export const Header = () => {
           </a>
           <a className={classes.item} href={LINK_BARRANQUILLA_INSTAGRAM} target="_blank" rel="noreferrer">
             <FaInstagramSquare />
+          </a>
+          <a className={classes.item} href={LINK_BARRANQUILLA_YOUTUBE} target="_blank" rel="noreferrer">
+            <FaYoutubeSquare />
           </a>
         </div>
       </nav>
