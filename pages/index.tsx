@@ -7,7 +7,7 @@ export default function Home() {
     <section>
       <Head>
         <title>Barranquilla JS - Pagina Oficial</title>
-        <meta property="og:title" content="My page title" key="title" />
+        <meta property="og:title" content="Barranquilla JS - Pagina Oficial" key="title" />
       </Head>
       <Header />
       <Hero />
