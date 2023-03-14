@@ -1,8 +1,21 @@
-import { ButtonContained } from '@makinox/makinox-ui';
+import cn from 'classnames';
 import Head from 'next/head';
+import Image from 'next/image';
+import { FaLaptop, FaUsers } from 'react-icons/fa';
+
+import { ButtonContained } from '@makinox/makinox-ui';
+
 import { Footer, Header } from '../components';
 
 export default function Sponsors() {
+  const classes = {
+    initiativeCard: cn('bg-primary-200 w-96 flex flex-row rounded-md'),
+    initiativeCardIcon: cn('m-4'),
+    initiativeCardText: cn('flex flex-col items-start'),
+    initiativeCardtTitle: cn('pt-1 pr-6 text-xl font-semibold'),
+    initiativeCardtParragraph: cn('py-1 pr-6 text-justify'),
+  };
+
   return (
     <section>
       <Head>
@@ -11,29 +24,51 @@ export default function Sponsors() {
       </Head>
       <Header />
       <div className="container mx-auto">
-        <div>
-          <h1>Haz parte de nuestros sponsors</h1>
-          <p>
+        <div className="w-3/5 mx-auto">
+          <h1 className="text-5xl my-8 text-justify">Haz parte de nuestros sponsors</h1>
+          <p className="text-xl mb-8 text-justify">
             En BarranquillaJs, creemos en el poder de las conferencias impulsadas por la comunidad para avanzar en el mundo del desarrollo de software
             y Frontend. Al centrarnos en el talento local y el intercambio de conocimientos,estamos creando una plataforma para que tanto
             desarrolladores como cualquier persona crezca profecionalmente.
           </p>
         </div>
         <div>
-          <h2>Nuestras iniciativas</h2>
-          <div>
-            <h3>Charlas mensuales:</h3>
-            <p>
-              Son dos charlas de aproximadamente 40 minutos de duración, que se van a dar el mismo día. Estas charlas están propuestas por los
-              miembros de la comunidad que quieren compartir su conocimiento.
-            </p>
-          </div>
-          <div>
-            <h3>Taller mensual:</h3>
-            <p>
-              Es un taller práctico sobre alguna tecnología particular dictado por alguno de los expertos de la comunidad, el evento puede durar unas
-              tres horas.
-            </p>
+          <h2 className="text-3xl text-center">Nuestras iniciativas</h2>
+          <div className="flex justify-center items-center">
+            <div className="flex flex-col items-center gap-4 mr-6">
+              <div className={classes.initiativeCard}>
+                <FaUsers size={120} className={classes.initiativeCardIcon} />
+                <div className={classes.initiativeCardText}>
+                  <h3 className={classes.initiativeCardtTitle}>Charlas mensuales</h3>
+                  <p className={classes.initiativeCardtParragraph}>
+                    Son dos charlas de aproximadamente 40 minutos de duración, que se van a dar el mismo día. Estas charlas están propuestas por los
+                    miembros de la comunidad que quieren compartir su conocimiento.
+                  </p>
+                </div>
+              </div>
+              <div className={classes.initiativeCard}>
+                <FaLaptop size={120} className={classes.initiativeCardIcon} />
+                <div className={classes.initiativeCardText}>
+                  <h3 className={classes.initiativeCardtTitle}>Taller mensual</h3>
+                  <p className={classes.initiativeCardtParragraph}>
+                    Es un taller práctico sobre alguna tecnología particular dictado por alguno de los expertos de la comunidad, el evento puede durar
+                    unas tres horas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-80 w-96 rounded-sm">
+              <Image
+                className="object-cover rounded-sm"
+                src={'https://secure.meetupstatic.com/photos/event/a/c/7/6/highres_507044150.jpeg'}
+                fill
+                priority={false}
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                alt={`BarranqullaJS: meetup`}
+              />
+            </div>
           </div>
         </div>
         <div>
