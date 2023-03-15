@@ -68,9 +68,9 @@ export default function Sponsors() {
                 src={'https://secure.meetupstatic.com/photos/event/a/c/7/6/highres_507044150.jpeg'}
                 fill
                 priority={false}
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                sizes="(min-width: 66em) 33vw,
+                (min-width: 44em) 50vw,
+                100vw"
                 alt={`BarranqullaJS: meetup`}
               />
             </div>
