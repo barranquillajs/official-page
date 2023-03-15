@@ -1,13 +1,13 @@
 import cn from 'classnames';
-import Head from 'next/head';
 import Image from 'next/image';
-import { FaChartBar, FaLaptop, FaUsers } from 'react-icons/fa';
 import { MdOutlineStackedBarChart } from 'react-icons/md';
+import { FaChartBar, FaLaptop, FaUsers } from 'react-icons/fa';
 
 import { ButtonContained } from '@makinox/makinox-ui';
 
-import { Footer, Header } from '../components';
 import { pricingData } from '../constants/pricing';
+import Helmet from '../components/helmet/helmet';
+import { Footer, Header } from '../components';
 
 export const initiativesData = [
   {
@@ -37,10 +37,7 @@ export default function Sponsors() {
 
   return (
     <section>
-      <Head>
-        <title>Haz parte de nuestros sponsors - Barranquilla JS</title>
-        <meta property="og:title" content="Haz parte de nuestros sponsors - Barranquilla JS" key="title" />
-      </Head>
+      <Helmet title="Haz parte de nuestros sponsors - Barranquilla JS" />
       <Header />
       <div className="container mx-auto xl:px-48">
         <div>
