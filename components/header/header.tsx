@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaTwitterSquare, FaLinkedin, FaWhatsapp, FaMeetup, FaInstagramSquare, FaTiktok, FaTwitch, FaYoutubeSquare } from 'react-icons/fa';
 
 import { FluidContainer, TopBar } from '@makinox/makinox-ui';
@@ -24,10 +25,10 @@ export const Header = () => {
   return (
     <header className={`${TopBar({ isDark: false })}`}>
       <nav className={`flex flex-col justify-center md:flex-row md:justify-between items-center py-2 ${FluidContainer()} `}>
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image className="rounded-md" src={headerimage} alt="BarranquillaJS logo" width={30} height={30} />
           <span className="ml-2">Barranquilla JS</span>
-        </div>
+        </Link>
 
         <div className="flex">
           <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer">

@@ -1,14 +1,11 @@
-import Head from 'next/head';
-import { Footer, Header } from '../components';
 import { InfoSection, Meetups, Sponsor, Speakers, Staff, Hero } from '../modules';
+import Helmet from '../components/helmet/helmet';
+import { Footer, Header } from '../components';
 
 export default function Home() {
   return (
     <section>
-      <Head>
-        <title>Barranquilla JS - Pagina Oficial</title>
-        <meta property="og:title" content="My page title" key="title" />
-      </Head>
+      <Helmet />
       <Header />
       <Hero />
       <InfoSection />
