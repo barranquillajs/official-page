@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import { Footer, Header } from '../components';
 import { InfoSection, Meetups, Sponsor, Speakers, Staff, Hero } from '../modules';
 

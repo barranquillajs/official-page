@@ -7,6 +7,7 @@ import { MdOutlineStackedBarChart } from 'react-icons/md';
 import { ButtonContained } from '@makinox/makinox-ui';
 
 import { Footer, Header } from '../components';
+import { PRICING_DATA } from '../constants/pricing';
 
 export default function Sponsors() {
   const classes = {
@@ -94,51 +95,24 @@ export default function Sponsors() {
             <h2 className={classes.pageSbutitle}>Eres bienvenido en nuestra comunidad</h2>
           </div>
           <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between gap-4">
-            <article className={classes.planCard}>
-              <div className={classes.planCardHeader}>
-                <span>Silver</span>
-                <button className={ButtonContained({ size: 'sm' })}>Mensual</button>
-              </div>
-              <div>
-                <ul className={classes.planCardList}>
-                  <li>Logo en pequeño en la página</li>
-                  <li>1 silla reservada en los eventos</li>
-                </ul>
-              </div>
-            </article>
-            <article className={classes.planCard}>
-              <div className={classes.planCardHeader}>
-                <span>Gold</span>
-                <button className={ButtonContained({ size: 'sm' })}>Mensual</button>
-              </div>
-              <div>
-                <ul className={classes.planCardList}>
-                  <li>Logo en mediano en la página</li>
-                  <li>3 sillas reservadas en los eventos del meetup</li>
-                  <li>100 palabras en perfil de empresa en el sitio</li>
-                  {/* <li>1 publicación de ofertas de empleo al mes en los canales de comunicación</li> */}
-                  <li>Espacio de 3 minutos en los eventos del meetup (charla corta o video)</li>
-                </ul>
-              </div>
-            </article>
-            <article className={classes.planCard}>
-              <div className={classes.planCardHeader}>
-                <span>Diamond</span>
-                <button className={ButtonContained({ size: 'sm' })}>Mensual</button>
-              </div>
-              <div>
-                <ul className={classes.planCardList}>
-                  <li>Logo en grande en la página</li>
-                  <li>Logo en las publicaciones</li>
-                  <li>10 sillas reservadas en los eventos del meetup</li>
-                  <li>300 palabras en perfil de empresa en el sitio</li>
-                  {/* <li>2 publicaciónes de ofertas de empleo al mes en los canales de comunicación</li> */}
-                  <li>Espacio de 5 minutos en los eventos del meetup (charla corta o video)</li>
-                  <li>Repartir stickers de empresa y folletos de información.</li>
-                  <li>Compartimos codigo QR o link de promociones o servicios</li>
-                </ul>
-              </div>
-            </article>
+            {PRICING_DATA.map((plan) => (
+              <article key={plan.title} className={classes.planCard}>
+                <div className={classes.planCardHeader}>
+                  <span>{plan.title}</span>
+                  <button className={ButtonContained({ size: 'sm' })}>Mensual</button>
+                </div>
+                <div className="my-4 flex justify-center">
+                  <span className="opacity-70 text-center text-sm">Pago mensual de {plan.price}</span>
+                </div>
+                <div>
+                  <ul className={classes.planCardList}>
+                    {plan.perks.map((perk) => (
+                      <li key={perk}>{perk}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
         <div className="flex justify-center py-16">

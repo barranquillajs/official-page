@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { Fragment } from 'react';
+
 import { ButtonContained, FluidContainer } from '@makinox/makinox-ui';
 
 import { sponsorsData, SPONSOR_LEVEL } from '../../constants';
@@ -9,9 +11,9 @@ export const Sponsor = () => {
     <section className={`${FluidContainer()} pt-20`}>
       <div className="flex flex-col justify-center items-center md:flex-row md:justify-between">
         <h2 className="text-3xl">Nuestros patrocinadores</h2>
-        <a href="mailto:barranquillajsx@gmail.com" target="_blank" rel="noreferrer" className={ButtonContained()}>
+        <Link href="/sponsors" className={ButtonContained()}>
           Registrate como sponsor
-        </a>
+        </Link>
       </div>
       <div>
         {Object.keys(SPONSOR_LEVEL).map((level) => {
