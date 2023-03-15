@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { StaticImageData } from 'next/image';
 
-import baqjsLogo from '../../public/assets/BAQ-PEOPLE.jpeg';
+import baqjsLogo from '../../public/assets/BAQJS.png';
 
 type HelmetProps = {
   title?: string;

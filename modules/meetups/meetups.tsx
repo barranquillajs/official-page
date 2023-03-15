@@ -17,8 +17,7 @@ export const Meetups = () => {
                 src={meetup.photo}
                 fill
                 priority={false}
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
+                sizes="(max-width: 328px) 100vw,
               33vw"
                 alt={`BarranqullaJS: meetup`}
               />
