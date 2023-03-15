@@ -7,7 +7,20 @@ import { MdOutlineStackedBarChart } from 'react-icons/md';
 import { ButtonContained } from '@makinox/makinox-ui';
 
 import { Footer, Header } from '../components';
-import { PRICING_DATA } from '../constants/pricing';
+import { pricingData } from '../constants/pricing';
+
+export const initiativesData = [
+  {
+    icon: <FaUsers size={120} className="m-4" />,
+    title: 'Charlas mensuales',
+    text: 'Son dos charlas de aproximadamente 40 minutos de duración, que se van a dar el mismo día. Estas charlas están propuestas por los miembros de la comunidad que quieren compartir su conocimiento.',
+  },
+  {
+    icon: <FaLaptop size={120} className="m-4" />,
+    title: 'Taller mensual',
+    text: 'Es un taller práctico sobre alguna tecnología particular dictado por alguno de los expertos de la comunidad, el evento puede durar unas tres horas.',
+  },
+];
 
 export default function Sponsors() {
   const classes = {
@@ -42,26 +55,15 @@ export default function Sponsors() {
           <h2 className={classes.pageSbutitle}>Nuestras iniciativas</h2>
           <div className="flex justify-center md:justify-around md:items-center">
             <div className="flex flex-col items-center gap-4 md:mr-6">
-              <div className={classes.initiativeCard}>
-                <FaUsers size={120} className={classes.initiativeCardIcon} />
-                <div className={classes.initiativeCardText}>
-                  <h3 className={classes.initiativeCardtTitle}>Charlas mensuales</h3>
-                  <p className={classes.initiativeCardtParragraph}>
-                    Son dos charlas de aproximadamente 40 minutos de duración, que se van a dar el mismo día. Estas charlas están propuestas por los
-                    miembros de la comunidad que quieren compartir su conocimiento.
-                  </p>
+              {initiativesData.map((initiative) => (
+                <div key={initiative.title} className={classes.initiativeCard}>
+                  {initiative.icon}
+                  <div className={classes.initiativeCardText}>
+                    <h3 className={classes.initiativeCardtTitle}>{initiative.title}</h3>
+                    <p className={classes.initiativeCardtParragraph}>{initiative.text}</p>
+                  </div>
                 </div>
-              </div>
-              <div className={classes.initiativeCard}>
-                <FaLaptop size={120} className={classes.initiativeCardIcon} />
-                <div className={classes.initiativeCardText}>
-                  <h3 className={classes.initiativeCardtTitle}>Taller mensual</h3>
-                  <p className={classes.initiativeCardtParragraph}>
-                    Es un taller práctico sobre alguna tecnología particular dictado por alguno de los expertos de la comunidad, el evento puede durar
-                    unas tres horas.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="hidden md:block relative h-80 w-96 rounded-sm">
               <Image
@@ -95,7 +97,7 @@ export default function Sponsors() {
             <h2 className={classes.pageSbutitle}>Eres bienvenido en nuestra comunidad</h2>
           </div>
           <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between gap-4">
-            {PRICING_DATA.map((plan) => (
+            {pricingData.map((plan) => (
               <article key={plan.title} className={classes.planCard}>
                 <div className={classes.planCardHeader}>
                   <span>{plan.title}</span>

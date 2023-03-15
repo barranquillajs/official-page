@@ -4,7 +4,7 @@ export enum PLANS {
   Diamond = 'Diamond',
 }
 
-export const PRICING_DATA = [
+export const pricingData = [
   {
     title: PLANS.Silver,
     price: '$80.000',
