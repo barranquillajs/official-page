@@ -1,4 +1,5 @@
 import { ButtonContained, FluidContainer } from '@makinox/makinox-ui';
+import Link from 'next/link';
 import cn from 'classnames';
 
 export const InfoSection = () => {
@@ -25,9 +26,9 @@ export const InfoSection = () => {
           <h2 className={classes.title}>Haz parte de nuestros sponsors</h2>
           <p className={classes.parragraph}>Apoyanos, crezcamos juntos, mejoremos este comunidad entre todos.</p>
           <div className="flex justify-center md:justify-start">
-            <a href="mailto:barranquillajsx@gmail.com" target="_blank" rel="noreferrer" className={ButtonContained()}>
+            <Link href="/sponsors" className={ButtonContained()}>
               Mas informacion
-            </a>
+            </Link>
           </div>
         </article>
       </div>
