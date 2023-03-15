@@ -143,7 +143,7 @@ export default function Sponsors() {
         </div>
         <div className="flex justify-center py-16">
           <a href="mailto:barranquillajsx@gmail.com" target="_blank" rel="noreferrer" className={ButtonContained()}>
-            Contactanos
+            Contáctanos
           </a>
         </div>
       </div>
