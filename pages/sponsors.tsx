@@ -66,7 +66,8 @@ export default function Sponsors() {
               <Image
                 className="object-cover rounded-sm"
                 src={'https://secure.meetupstatic.com/photos/event/a/c/7/6/highres_507044150.jpeg'}
-                fill
+                width={500}
+                height={500}
                 priority={false}
                 sizes="(min-width: 66em) 33vw,
                 (min-width: 44em) 50vw,
