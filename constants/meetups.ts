@@ -1,5 +1,11 @@
 export const MEETUP_DATA = [
   {
+    title: 'Frontend Everywhere & Desmitificando Jest',
+    photo: 'https://secure.meetupstatic.com/photos/event/a/4/1/f/highres_511362015.webp',
+    link: 'https://www.meetup.com/es/barranquillajs/events/291670797/',
+    speakers: ['Nicolas Camacho Aguilar', 'Jesús Hernández'],
+  },
+  {
     title: 'Bases de datos NoSQL & Cómo crear código irrompible',
     photo: 'https://secure.meetupstatic.com/photos/event/e/7/6/8/highres_508799240.jpeg',
     link: 'https://www.meetup.com/es/barranquillajs/events/289361893/',
