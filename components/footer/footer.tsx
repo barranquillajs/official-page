@@ -1,7 +1,7 @@
 import { FaInstagramSquare, FaLinkedin, FaMeetup, FaTiktok, FaTwitterSquare, FaWhatsapp, FaYoutubeSquare, FaTwitch } from 'react-icons/fa';
 import cn from 'classnames';
 
-import { TopBar, FluidContainer } from '@makinox/makinox-ui';
+import { TopBar } from '@makinox/makinox-ui';
 
 import {
   LINK_BARRANQUILLA_INSTAGRAM,
@@ -14,13 +14,14 @@ import {
   LINK_BARRANQUILLA_YOUTUBE,
 } from '../../constants';
 
+const classes = {
+  item: cn('ml-4 text-primary-500 text-2xl'),
+};
+
 export const Footer = () => {
-  const classes = {
-    item: cn('ml-2 text-primary-500 text-2xl'),
-  };
   return (
     <footer className={`${TopBar()} mt-28`}>
-      <div className={FluidContainer()} style={{ padding: '10px 0' }}>
+      <div className="container mx-auto" style={{ padding: '10px 0' }}>
         <div className="flex flex-col justify-center md:flex-row md:justify-between">
           <span className="text-center">Barranquilla JS (BAQJS) - {new Date().getFullYear()}</span>
           <div className="flex justify-center">

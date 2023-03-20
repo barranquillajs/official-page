@@ -1,15 +1,16 @@
-import { ButtonContained, FluidContainer } from '@makinox/makinox-ui';
+import { ButtonContained } from '@makinox/makinox-ui';
 import Link from 'next/link';
 import cn from 'classnames';
 
+const classes = {
+  title: cn('text-2xl mb-1 text-center md:text-left'),
+  parragraph: cn('text-base mb-2 text-center md:text-left'),
+  item: cn('w-full md:w-96 rounded-md p-4'),
+};
+
 export const InfoSection = () => {
-  const classes = {
-    title: cn('text-2xl mb-1 text-center md:text-left'),
-    parragraph: cn('text-base mb-2 text-center md:text-left'),
-    item: cn('w-full md:w-96 rounded-md p-4'),
-  };
   return (
-    <section className={FluidContainer()}>
+    <section className="container mx-auto">
       <div className="flex justify-center flex-col md:flex-row md:justify-around pt-20">
         <article className={cn(classes.item, 'bg-primary-50')}>
           <h2 className={classes.title}>Queremos escuchar de ti</h2>
