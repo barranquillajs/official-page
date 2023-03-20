@@ -31,7 +31,7 @@ export const Meetups = () => {
               />
             </div>
             <div className="card-header">
-              <h6 className="headline6">{meetup.title}</h6>
+              <h5 className="headline6">{meetup.title}</h5>
             </div>
             <div className="card-body">
               <p className="body2">

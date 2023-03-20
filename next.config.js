@@ -5,6 +5,10 @@ const nextConfig = {
   images: {
     domains: ['secure.meetupstatic.com'],
   },
+  i18n: {
+    locales: ['es'],
+    defaultLocale: 'es',
+  },
 };
 
 module.exports = nextConfig;

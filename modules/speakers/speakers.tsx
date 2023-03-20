@@ -48,17 +48,17 @@ export const Speakers = () => {
               </div>
               <div className="flex justify-center h-10">
                 {speaker?.page && (
-                  <a className={classes.link} href={speaker.page} target="_blank" rel="noreferrer">
+                  <a className={classes.link} href={speaker.page} target="_blank" rel="noreferrer" aria-label={`Pagina web de ${speaker.name}`}>
                     <FaHome size={classes.icons} />
                   </a>
                 )}
                 {speaker?.github && (
-                  <a className={classes.link} href={speaker.github} target="_blank" rel="noreferrer">
+                  <a className={classes.link} href={speaker.github} target="_blank" rel="noreferrer" aria-label={`Github de ${speaker.name}`}>
                     <FaGithubSquare size={classes.icons} />
                   </a>
                 )}
                 {speaker?.linkedin && (
-                  <a className={classes.link} href={speaker.linkedin} target="_blank" rel="noreferrer">
+                  <a className={classes.link} href={speaker.linkedin} target="_blank" rel="noreferrer" aria-label={`Linkedin de ${speaker.name}`}>
                     <FaLinkedin size={classes.icons} />
                   </a>
                 )}
