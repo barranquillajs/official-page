@@ -3,6 +3,13 @@ import juanMendozaPhoto from '../public/assets/people/JUAN-MENDOZA.jpeg';
 
 export const speakerData = [
   {
+    name: 'Nicolas Camacho Aguilar',
+    image: undefined,
+    page: 'https://nicolas-camacho.vercel.app/',
+    github: 'https://github.com/nicolas-camacho',
+    linkedin: 'https://www.linkedin.com/in/nicolas-camacho-aguilar/',
+  },
+  {
     name: 'Gabriel Coronado Salas',
     image: undefined,
     page: undefined,
