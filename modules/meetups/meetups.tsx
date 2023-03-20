@@ -10,7 +10,11 @@ export const Meetups = () => {
       </div>
       <div className="flex items-start justify-center lg:justify-between my-4 flex-wrap">
         {MEETUP_DATA.slice(0, 3).map((meetup) => (
-          <article className={` m-2 cursor-pointer ${Card({ type: 'outlined' })}`} onClick={() => window.open(meetup.link)} key={meetup.title}>
+          <article
+            className={`relative m-2 cursor-pointer ${Card({ type: 'outlined' })}`}
+            onClick={() => window.open(meetup.link)}
+            key={meetup.title}
+          >
             <div className="card-media w-96 h-56">
               <Image
                 className="object-cover"
@@ -18,6 +22,8 @@ export const Meetups = () => {
                 fill
                 priority={false}
                 quality={50}
+                placeholder="blur"
+                blurDataURL={meetup.photoBlurUrl}
                 sizes="(min-width: 66em) 33vw,
                 (min-width: 44em) 50vw,
                 100vw"
