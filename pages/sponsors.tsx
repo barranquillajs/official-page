@@ -22,19 +22,19 @@ export const initiativesData = [
   },
 ];
 
-export default function Sponsors() {
-  const classes = {
-    pageSbutitle: cn('text-3xl text-center mb-14 mt-24'),
-    initiativeCard: cn('bg-primary-200 w-96 flex flex-row rounded-md'),
-    initiativeCardIcon: cn('m-4'),
-    initiativeCardText: cn('flex flex-col items-start'),
-    initiativeCardtTitle: cn('pt-1 pr-6 text-xl font-semibold'),
-    initiativeCardtParragraph: cn('py-1 pr-6 text-justify'),
-    planCard: cn('border-4 border-primary-100 w-80 h-w-80 p-4 rounded-md'),
-    planCardHeader: cn('flex items-center justify-around py-4'),
-    planCardList: cn('list-disc pl-4'),
-  };
+const classes = {
+  pageSbutitle: cn('text-3xl text-center mb-14 mt-24'),
+  initiativeCard: cn('bg-primary-200 w-96 flex flex-row rounded-md'),
+  initiativeCardIcon: cn('m-4'),
+  initiativeCardText: cn('flex flex-col items-start'),
+  initiativeCardtTitle: cn('pt-1 pr-6 text-xl font-semibold'),
+  initiativeCardtParragraph: cn('py-1 pr-6 text-justify'),
+  planCard: cn('border-4 border-primary-100 w-80 h-w-80 p-4 rounded-md'),
+  planCardHeader: cn('flex items-center justify-around py-4'),
+  planCardList: cn('list-disc pl-4'),
+};
 
+export default function Sponsors() {
   return (
     <section>
       <Helmet title="Haz parte de nuestros sponsors - Barranquilla JS" />

@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Card, FluidContainer, ButtonContained } from '@makinox/makinox-ui';
+import { Card, ButtonContained } from '@makinox/makinox-ui';
 import { LINK_BARRANQUILLA_MEETUP, MEETUP_DATA } from '../../constants';
 
 export const Meetups = () => {
   return (
-    <section className={`flex flex-col justify-center ${FluidContainer}`}>
+    <section className="flex flex-col justify-center container mx-auto">
       <div className="mb-2 pt-20 w-full flex justify-center">
         <h1 className="text-3xl">Ultimos eventos</h1>
       </div>

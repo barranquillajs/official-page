@@ -3,24 +3,24 @@ import { useState } from 'react';
 import Image from 'next/image';
 import cn from 'classnames';
 
-import { ButtonContained, FluidContainer } from '@makinox/makinox-ui';
+import { ButtonContained } from '@makinox/makinox-ui';
 
 import { speakerData } from '../../constants';
+
+const classes = {
+  imageContainer: cn('flex justify-center p-2'),
+  imageWrapper: cn('flex bg-primary-100 w-32 h-32 justify-center items-center rounded-full'),
+  link: cn('p-2'),
+  icons: 20,
+};
 
 export const Speakers = () => {
   const [showAll, setShowAll] = useState(false);
 
-  const classes = {
-    imageContainer: cn('flex justify-center p-2'),
-    imageWrapper: cn('flex bg-primary-100 w-32 h-32 justify-center items-center rounded-full'),
-    link: cn('p-2'),
-    icons: 20,
-  };
-
   const speakers = showAll ? speakerData : speakerData.slice(0, 6);
 
   return (
-    <section className={`${FluidContainer()} pt-20`}>
+    <section className="pt-20 container mx-auto">
       <h2 className="text-3xl">Nuestros heroes</h2>
       <p>Los charlistas que nos hacen crecer compartiendo su conocimiento</p>
 

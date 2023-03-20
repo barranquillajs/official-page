@@ -2,20 +2,18 @@ import { FaLinkedin, FaHome, FaGithubSquare } from 'react-icons/fa';
 import Image from 'next/image';
 import cn from 'classnames';
 
-import { FluidContainer } from '@makinox/makinox-ui';
-
 import { staffData } from '../../constants';
 
-export const Staff = () => {
-  const classes = {
-    imageContainer: cn('flex justify-center p-2 ro'),
-    imageWrapper: cn('flex bg-base-white w-32 h-32 justify-center items-center rounded-full'),
-    link: cn('p-2'),
-    icons: 20,
-  };
+const classes = {
+  imageContainer: cn('flex justify-center p-2 ro'),
+  imageWrapper: cn('flex bg-base-white w-32 h-32 justify-center items-center rounded-full'),
+  link: cn('p-2'),
+  icons: 20,
+};
 
+export const Staff = () => {
   return (
-    <section className={`${FluidContainer()} pt-20`}>
+    <section className="container mx-auto pt-20">
       <div>
         <h2 className="text-3xl text-center">Organizadores</h2>
       </div>

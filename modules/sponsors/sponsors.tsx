@@ -2,13 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Fragment } from 'react';
 
-import { ButtonContained, FluidContainer } from '@makinox/makinox-ui';
+import { ButtonContained } from '@makinox/makinox-ui';
 
 import { sponsorsData, SPONSOR_LEVEL } from '../../constants';
 
 export const Sponsor = () => {
   return (
-    <section className={`${FluidContainer()} pt-20`}>
+    <section className="container mx-auto pt-20">
       <div className="flex flex-col justify-center items-center md:flex-row md:justify-between">
         <h2 className="text-3xl">Nuestros patrocinadores</h2>
         <Link href="/sponsors" className={ButtonContained()}>
