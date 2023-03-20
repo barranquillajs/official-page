@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { ButtonContained, ButtonOutline } from '@makinox/makinox-ui';
 
 import { LINK_BARRANQUILLA_LINKEDIN, LINK_BARRANQUILLA_MEETUP } from '../../constants';
-import imagePeople from '../../public/assets/BAQJS.png';
+import imagePeople from '../../public/assets/BAQJSTiny.png';
 
 export const Hero = () => {
   return (
