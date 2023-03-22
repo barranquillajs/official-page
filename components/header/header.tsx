@@ -23,12 +23,10 @@ export const Header = () => {
   return (
     <header className={`flex justify-center`}>
       <nav className={`container flex flex-col justify-center md:flex-row md:justify-between items-center py-2`}>
-        <h1>
-          <Link href="/" className="flex items-center">
-            <Image className="rounded-md" src={headerimage} alt="BarranquillaJS logo" width={60} height={60} />
-            Barranquilla JS
-          </Link>
-        </h1>
+        <Link href="/" className="flex items-center">
+          <Image className="rounded-md" src={headerimage} alt="BarranquillaJS logo" width={60} height={60} />
+          <h1 className="text-xl">Barranquilla JS</h1>
+        </Link>
 
         <div className="flex">
           <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer" aria-label="Link hacia meetup">

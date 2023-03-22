@@ -23,7 +23,7 @@ export const Footer = () => {
     <footer className={`${TopBar()} mt-28`}>
       <div className="container mx-auto" style={{ padding: '20px 0' }}>
         <div className="flex flex-col justify-center md:flex-row md:justify-between">
-          <h3 className="text-center">Barranquilla JS (BAQJS) - {new Date().getFullYear()}</h3>
+          <h3 className="text-center text-lg">Barranquilla JS (BAQJS) - {new Date().getFullYear()}</h3>
           <div className="flex justify-center">
             <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer" aria-label="Link hacia meetup">
               <FaMeetup />
