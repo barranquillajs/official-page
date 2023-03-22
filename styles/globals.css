@@ -38,7 +38,6 @@ a {
 
 /* NavBar */
 main > section > header {
-  background-color: rgb(var(--light-primary));
   box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
