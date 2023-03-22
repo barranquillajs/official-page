@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './modules/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -38,5 +40,12 @@ module.exports = {
       body: ['DM Sans'],
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        h1: { fontSize: theme('fontSize.xl') },
+        h3: { fontSize: theme('fontSize.base') },
+      });
+    }),
+  ],
 };

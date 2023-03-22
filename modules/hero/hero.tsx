@@ -11,9 +11,9 @@ export const Hero = () => {
   return (
     <article className={`flex items-center justify-between md:flex-row flex-col-reverse pt-12 container mx-auto`}>
       <div className="my-2 max-w-lg">
-        <h1 className="text-4xl text-center md:text-left">
+        <h3 className="text-4xl text-center md:text-left">
           Este es un grupo para todos los desarrolladores, entusiastas y apasionados por Javascript en Barranquilla y la costa.
-        </h1>
+        </h3>
         <div className="flex items-center justify-center md:justify-start my-2">
           <a href={LINK_BARRANQUILLA_LINKEDIN} target="_blank" rel="noreferrer" className={`${ButtonContained()} mr-4`}>
             Síguenos
