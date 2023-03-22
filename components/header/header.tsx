@@ -21,7 +21,7 @@ const classes = {
 
 export const Header = () => {
   return (
-    <header className={`flex justify-center bg-primary-400`}>
+    <header className={`flex justify-center bg-primary-400 top-0 z-10 sticky shadow shadow-secondary-300/40`}>
       <nav className={`container flex flex-col justify-center md:flex-row md:justify-between items-center py-2`}>
         <Link href="/" className="flex items-center">
           <Image className="rounded-md" src={headerimage} alt="BarranquillaJS logo" width={60} height={60} />

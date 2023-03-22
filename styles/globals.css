@@ -35,11 +35,3 @@ a {
   max-width: 1400px;
   width: 100%;
 }
-
-/* NavBar */
-main > section > header {
-  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
