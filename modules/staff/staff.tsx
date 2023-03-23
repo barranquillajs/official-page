@@ -36,17 +36,17 @@ export const Staff = () => {
               </div>
               <div className="flex justify-center h-10">
                 {staff?.page && (
-                  <a className={classes.link} href={staff.page} target="_blank" rel="noreferrer">
+                  <a className={classes.link} href={staff.page} target="_blank" rel="noreferrer" aria-label="Website">
                     <FaHome size={classes.icons} />
                   </a>
                 )}
                 {staff?.github && (
-                  <a className={classes.link} href={staff.github} target="_blank" rel="noreferrer">
+                  <a className={classes.link} href={staff.github} target="_blank" rel="noreferrer" aria-label="Github">
                     <FaGithubSquare size={classes.icons} />
                   </a>
                 )}
                 {staff?.linkedin && (
-                  <a className={classes.link} href={staff.linkedin} target="_blank" rel="noreferrer">
+                  <a className={classes.link} href={staff.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                     <FaLinkedin size={classes.icons} />
                   </a>
                 )}

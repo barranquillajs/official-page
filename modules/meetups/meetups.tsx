@@ -6,7 +6,7 @@ export const Meetups = () => {
   return (
     <section className="flex flex-col justify-center container mx-auto">
       <div className="mb-2 pt-20 w-full flex justify-center">
-        <h1 className="text-3xl">Ultimos eventos</h1>
+        <h2 className="text-3xl">Ultimos eventos</h2>
       </div>
       <div className="flex items-start justify-center lg:justify-between my-4 flex-wrap">
         {MEETUP_DATA.slice(0, 3).map((meetup) => (
@@ -31,7 +31,7 @@ export const Meetups = () => {
               />
             </div>
             <div className="card-header">
-              <h5 className="headline6">{meetup.title}</h5>
+              <h3 className="headline6">{meetup.title}</h3>
             </div>
             <div className="card-body">
               <p className="body2">
