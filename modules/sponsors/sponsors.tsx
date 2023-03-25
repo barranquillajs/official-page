@@ -28,7 +28,7 @@ export const Sponsor = () => {
                     <div className="flex justify-center pt-2">
                       <Image width={208} className="rounded-full" src={sponsor.logo} alt="Asistentes del meetup de barranquilla JS" />
                     </div>
-                    <h5 className="py-2 text-center">{sponsor.name}</h5>
+                    <h4 className="py-2 text-center">{sponsor.name}</h4>
                   </article>
                 ))}
               </div>

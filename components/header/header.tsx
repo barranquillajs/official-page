@@ -3,8 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaTwitterSquare, FaLinkedin, FaWhatsapp, FaMeetup, FaInstagramSquare, FaTiktok, FaTwitch, FaYoutubeSquare } from 'react-icons/fa';
 
-import { TopBar } from '@makinox/makinox-ui';
-
 import {
   LINK_BARRANQUILLA_INSTAGRAM,
   LINK_BARRANQUILLA_LINKEDIN,
@@ -18,16 +16,16 @@ import {
 import headerimage from '../../public/assets/BAQJS.png';
 
 const classes = {
-  item: cn('ml-4 my-1 text-primary-500 text-xl'),
+  item: cn('ml-4 my-1 text-xl'),
 };
 
 export const Header = () => {
   return (
-    <header className={`flex justify-center ${TopBar({ isDark: false })}`}>
+    <header className={`flex justify-center bg-primary-400 top-0 z-10 md:sticky shadow shadow-secondary-300/40`}>
       <nav className={`container flex flex-col justify-center md:flex-row md:justify-between items-center py-2`}>
         <Link href="/" className="flex items-center">
-          <Image className="rounded-md" src={headerimage} alt="BarranquillaJS logo" width={30} height={30} />
-          <span className="ml-2">Barranquilla JS</span>
+          <Image className="rounded-md w-12 h-12" src={headerimage} alt="BarranquillaJS logo" />
+          <h1 className="text-xl">Barranquilla JS</h1>
         </Link>
 
         <div className="flex">
