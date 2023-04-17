@@ -10,9 +10,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.12",
     "@makinox/makinox-ui": "1.6.8",
     "@next/font": "13.0.3",
     "classnames": "2.3.2",
+    "graphql": "^16.6.0",
     "next": "13.0.3",
     "npm": "^8.19.2",
     "react": "18.2.0",
