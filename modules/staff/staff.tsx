@@ -17,7 +17,7 @@ export const Staff = () => {
       <div>
         <h2 className="text-3xl text-center">Organizadores</h2>
       </div>
-      <div className="flex justify-center md:justify-between flex-wrap mt-8">
+      <div className="flex justify-center flex-wrap mt-8">
         {staffData.map((staff) => {
           return (
             <article key={staff.name} className="bg-primary-50 w-64 rounded-md m-4">

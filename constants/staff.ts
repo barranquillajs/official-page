@@ -1,7 +1,8 @@
-import jesusBossaPhoto from '../public/assets/people/JESUS-BOSSA.jpeg';
 import jesusHernandezPhoto from '../public/assets/people/JESUS-HERNANDEZ.jpeg';
 import aldairMorenoPhoto from '../public/assets/people/ALDAIR-MORENO.jpeg';
+import jesusBossaPhoto from '../public/assets/people/JESUS-BOSSA.jpeg';
 import luisPorrasPhoto from '../public/assets/people/LUIS-PORRAS.jpeg';
+import emaAmeelPhoto from '../public/assets/people/EMY-AMEEL.jpeg';
 
 export const staffData = [
   {
@@ -27,6 +28,14 @@ export const staffData = [
     page: undefined,
     github: undefined,
     linkedin: 'https://www.linkedin.com/in/aldairmc/',
+  },
+  {
+    name: 'Emy Amell',
+    text: 'Designer',
+    image: emaAmeelPhoto,
+    page: 'https://nowpage1.wixsite.com/portafolio-2020',
+    github: undefined,
+    linkedin: 'https://www.linkedin.com/in/emyamell1/',
   },
   {
     name: 'Jesus Hernandez',

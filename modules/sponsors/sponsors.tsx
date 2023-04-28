@@ -20,7 +20,7 @@ export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
           if (!currentSponsor?.length) return <Fragment key={level}></Fragment>;
           return (
             <div key={level}>
-              <h3 className="text-xl capitalize py-4">{level.toLocaleLowerCase()} sponsor</h3>
+              <h3 className="text-xl capitalize py-4 text-center md:text-left">{level.toLocaleLowerCase()} sponsor</h3>
               <div className="bg-primary-50 flex justify-center rounded-xl gap-2">
                 {currentSponsor?.map((sponsor) => (
                   <article key={sponsor.name} className="flex flex-col justify-center">
