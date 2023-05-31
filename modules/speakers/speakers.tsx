@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import { ButtonContained } from '@makinox/makinox-ui';
 
-import { speakerData } from '../../constants';
+import { UserType } from '../../utils';
 
 const classes = {
   imageContainer: cn('flex justify-center p-2'),
@@ -14,10 +14,10 @@ const classes = {
   icons: 20,
 };
 
-export const Speakers = () => {
+export const Speakers = ({ speakers }: { speakers: Array<UserType> }) => {
   const [showAll, setShowAll] = useState(false);
 
-  const speakers = showAll ? speakerData : speakerData.slice(0, 6);
+  const resultSpeakers = showAll ? speakers : speakers?.slice(0, 6);
 
   return (
     <section className="pt-20 container mx-auto">
@@ -25,15 +25,15 @@ export const Speakers = () => {
       <p>Los charlistas que nos hacen crecer compartiendo su conocimiento</p>
 
       <div className="flex justify-center md:justify-between flex-wrap mt-8">
-        {speakers.map((speaker) => {
-          const hasPhoto = speaker.image !== undefined;
+        {resultSpeakers?.map((speaker) => {
+          const hasPhoto = speaker?.image?.url !== undefined;
 
           return (
             <article className="relative flex flex-col justify-center border-2 border-primary-100 w-40 min-h-40 rounded-md m-4" key={speaker.name}>
               {hasPhoto ? (
                 <div className={classes.imageContainer}>
                   <div className={classes.imageWrapper}>
-                    <Image src={speaker.image} alt={`Charlista ${speaker.name}`} width={112} height={112} className="rounded-full" />
+                    <Image src={speaker.image.url} alt={`Charlista ${speaker.name}`} width={112} height={112} className="rounded-full" />
                   </div>
                 </div>
               ) : (
@@ -47,18 +47,18 @@ export const Speakers = () => {
                 <span>{speaker.name}</span>
               </div>
               <div className="flex justify-center h-10">
-                {speaker?.page && (
-                  <a className={classes.link} href={speaker.page} target="_blank" rel="noreferrer" aria-label={`Pagina web de ${speaker.name}`}>
+                {speaker?.homePage && (
+                  <a className={classes.link} href={speaker.homePage} target="_blank" rel="noreferrer" aria-label={`Pagina web de ${speaker.name}`}>
                     <FaHome size={classes.icons} />
                   </a>
                 )}
-                {speaker?.github && (
-                  <a className={classes.link} href={speaker.github} target="_blank" rel="noreferrer" aria-label={`Github de ${speaker.name}`}>
+                {speaker?.githubLink && (
+                  <a className={classes.link} href={speaker.githubLink} target="_blank" rel="noreferrer" aria-label={`Github de ${speaker.name}`}>
                     <FaGithubSquare size={classes.icons} />
                   </a>
                 )}
-                {speaker?.linkedin && (
-                  <a className={classes.link} href={speaker.linkedin} target="_blank" rel="noreferrer" aria-label={`Linkedin de ${speaker.name}`}>
+                {speaker?.linkedinLink && (
+                  <a className={classes.link} href={speaker.linkedinLink} target="_blank" rel="noreferrer" aria-label={`Linkedin de ${speaker.name}`}>
                     <FaLinkedin size={classes.icons} />
                   </a>
                 )}

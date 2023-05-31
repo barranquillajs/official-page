@@ -1,10 +1,18 @@
 import { InfoSection, Meetups, Sponsor, Speakers, Staff, Hero } from '../modules';
 import Helmet from '../components/helmet/helmet';
 import { Footer, Header } from '../components';
-import { getAllSponsors } from '../controllers';
-import { SponsorType } from '../utils';
+import { getAllSponsors, getOrganizers, getSpeakers } from '../controllers';
+import { SponsorType, UserType } from '../utils';
 
-export default function Home({ sponsors }: { sponsors: Array<SponsorType> }) {
+export default function Home({
+  sponsors,
+  speakers,
+  organizers,
+}: {
+  sponsors: Array<SponsorType>;
+  organizers: Array<UserType>;
+  speakers: Array<UserType>;
+}) {
   return (
     <section>
       <Helmet />
@@ -13,8 +21,8 @@ export default function Home({ sponsors }: { sponsors: Array<SponsorType> }) {
       <InfoSection />
       <Meetups />
       <Sponsor sponsors={sponsors} />
-      <Staff />
-      <Speakers />
+      <Staff organizers={organizers} />
+      <Speakers speakers={speakers} />
       <Footer />
     </section>
   );
@@ -22,6 +30,8 @@ export default function Home({ sponsors }: { sponsors: Array<SponsorType> }) {
 
 export async function getServerSideProps() {
   const sponsors = await getAllSponsors();
+  const speakers = await getSpeakers();
+  const organizers = await getOrganizers();
 
-  return { props: { sponsors } };
+  return { props: { sponsors, speakers, organizers } };
 }
