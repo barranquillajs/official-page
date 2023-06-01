@@ -12,7 +12,6 @@
   "dependencies": {
     "@apollo/client": "3.7.15",
     "@makinox/makinox-ui": "1.6.8",
-    "@next/font": "13.4.4",
     "classnames": "2.3.2",
     "graphql": "^16.6.0",
     "next": "13.4.4",

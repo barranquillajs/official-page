@@ -27,7 +27,7 @@ export const InfoSection = () => {
           <h2 className={classes.title}>Haz parte de nuestros sponsors</h2>
           <p className={classes.parragraph}>Apoyanos, crezcamos juntos, mejoremos este comunidad entre todos.</p>
           <div className="flex justify-center md:justify-start">
-            <Link href="/sponsors" className={ButtonContained()}>
+            <Link href="/sponsors" className={`${ButtonContained()}`}>
               Mas información
             </Link>
           </div>

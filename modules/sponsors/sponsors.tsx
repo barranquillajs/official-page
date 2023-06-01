@@ -10,7 +10,7 @@ export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
     <section className="container mx-auto pt-20">
       <div className="flex flex-col justify-center items-center md:flex-row md:justify-between">
         <h2 className="text-3xl">Nuestros patrocinadores</h2>
-        <Link href="/sponsors" className={ButtonContained()} aria-label="Pagina de sponsor">
+        <Link href="/sponsors" className={`${ButtonContained()}`} aria-label="Pagina de sponsor">
           Registrate como sponsor
         </Link>
       </div>

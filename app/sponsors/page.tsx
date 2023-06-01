@@ -1,24 +1,12 @@
 import cn from 'classnames';
 import Image from 'next/image';
+import { FaChartBar } from 'react-icons/fa';
 import { MdOutlineStackedBarChart } from 'react-icons/md';
-import { FaChartBar, FaLaptop, FaUsers } from 'react-icons/fa';
 
 import { ButtonContained } from '@makinox/makinox-ui';
-import { Helmet, Footer, Header } from '@/components';
-import { pricingData } from '@/constants';
 
-export const initiativesData = [
-  {
-    icon: <FaUsers size={120} className="m-4" />,
-    title: 'Charlas mensuales',
-    text: 'Son dos charlas de aproximadamente 40 minutos de duración, que se van a dar el mismo día. Estas charlas están propuestas por los miembros de la comunidad que quieren compartir su conocimiento.',
-  },
-  {
-    icon: <FaLaptop size={120} className="m-4" />,
-    title: 'Taller mensual',
-    text: 'Es un taller práctico sobre alguna tecnología particular dictado por alguno de los expertos de la comunidad, el evento puede durar unas tres horas.',
-  },
-];
+import { initiativesData, pricingData } from '@/constants';
+import { Helmet, Footer, Header } from '@/components';
 
 const classes = {
   pageSbutitle: cn('text-3xl text-center mb-14 mt-24'),
@@ -97,7 +85,7 @@ export default function Sponsors() {
               <article key={plan.title} className={classes.planCard}>
                 <div className={classes.planCardHeader}>
                   <span>{plan.title}</span>
-                  <button className={ButtonContained({ size: 'sm' })}>Mensual</button>
+                  <button className={`${ButtonContained({ size: 'sm' })} px-4`}>Mensual</button>
                 </div>
                 <div className="my-4 flex justify-center">
                   <span className="opacity-70 text-center text-sm">Pago mensual de {plan.price}</span>
@@ -114,7 +102,7 @@ export default function Sponsors() {
           </div>
         </div>
         <div className="flex justify-center py-16">
-          <a href="mailto:barranquillajsx@gmail.com" target="_blank" rel="noreferrer" className={ButtonContained()}>
+          <a href="mailto:barranquillajsx@gmail.com" target="_blank" rel="noreferrer" className={`${ButtonContained()}`}>
             Contáctanos
           </a>
         </div>

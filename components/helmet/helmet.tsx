@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { StaticImageData } from 'next/image';
 
 import baqjsLogo from '../../public/assets/BAQJS.png';
@@ -18,7 +17,7 @@ const Helmet = ({
   image = baqjsLogo,
 }: HelmetProps) => {
   return (
-    <Head>
+    <>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -26,7 +25,7 @@ const Helmet = ({
 
       <meta property="og:title" content={title} key="title" />
       <meta name="og:image" content={image.src} />
-    </Head>
+    </>
   );
 };
 
