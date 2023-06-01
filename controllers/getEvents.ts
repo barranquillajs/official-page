@@ -23,13 +23,13 @@ const GetEventsQuery = gql`
 
 const parseEvents = async (data): Promise<Array<EventUserComposedType>> => {
   if (!data?.eventsCollection?.items) return [];
-  const eventsData: Array<EventType> = structuredClone(data.eventsCollection.items);
+  const eventsData: Array<EventType> = [...data.eventsCollection.items];
   const eventsPromised = eventsData.map(async (event) => {
     const speakersId = event.speakersId.map((el) => parseInt(el, 10));
     const speakersInfo = await getUsersBasic(speakersId);
-    const eventCopy: EventUserComposedType = structuredClone(event);
+    const eventCopy = { ...event };
     eventCopy['speakersInfo'] = speakersInfo;
-    return eventCopy;
+    return eventCopy as EventUserComposedType;
   });
 
   const eventsResolved = await Promise.all(eventsPromised);

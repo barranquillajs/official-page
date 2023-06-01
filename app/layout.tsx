@@ -9,7 +9,6 @@ import { Metadata } from 'next';
 export const metadata: Metadata = returnMetadata({});
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  console.log(firaCode.className);
   return (
     <html className={`${firaCode.variable} ${dmSans.variable}`} lang="es">
       <head />
