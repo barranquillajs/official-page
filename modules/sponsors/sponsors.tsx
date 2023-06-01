@@ -28,6 +28,7 @@ export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
                       <Image
                         width={SPONSOR_LEVEL[level].size}
                         height={SPONSOR_LEVEL[level].size}
+                        blurDataURL={sponsor.logoRaw}
                         className="rounded-full w-auto h-auto"
                         src={sponsor.logo.url}
                         alt="Asistentes del meetup de barranquilla JS"
