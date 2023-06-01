@@ -16,7 +16,7 @@ import {
 import headerimage from '@/public/assets/BAQJS.png';
 
 const classes = {
-  item: cn('ml-4 my-1 text-xl'),
+  item: cn('text-2xl'),
 };
 
 export const Header = () => {
@@ -25,10 +25,10 @@ export const Header = () => {
       <nav className={`container flex flex-col justify-center md:flex-row md:justify-between items-center py-2`}>
         <Link href="/" className="flex items-center">
           <Image className="rounded-md w-12 h-12" src={headerimage} alt="BarranquillaJS logo" />
-          <h1 className="text-xl">Barranquilla JS</h1>
+          <h1 className="text-2xl">Barranquilla JS</h1>
         </Link>
 
-        <div className="flex">
+        <div className="flex gap-4 my-4">
           <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer" aria-label="Link hacia meetup">
             <FaMeetup />
           </a>

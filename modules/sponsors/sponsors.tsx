@@ -23,11 +23,11 @@ export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
               <h3 className="text-xl capitalize py-4 text-center md:text-left">{level.toLocaleLowerCase()} sponsor</h3>
               <div className="bg-primary-50 flex justify-center rounded-xl gap-2">
                 {currentSponsor?.map((sponsor) => (
-                  <article key={sponsor.name} className="flex flex-col justify-center">
-                    <div className="flex justify-center pt-2">
+                  <article key={sponsor.name} className="flex flex-col justify-center items-center">
+                    <div className="flex justify-center pt-2 items-center" style={{ width: SPONSOR_LEVEL[level].size }}>
                       <Image
-                        width={SPONSOR_LEVEL[level].width}
-                        height={300}
+                        width={SPONSOR_LEVEL[level].size}
+                        height={SPONSOR_LEVEL[level].size}
                         className="rounded-full w-auto h-auto"
                         src={sponsor.logo.url}
                         alt="Asistentes del meetup de barranquilla JS"

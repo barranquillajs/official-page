@@ -10,7 +10,7 @@ const imagePeopleBlurUrl = `data:image/webp;base64,UklGRjQDAABXRUJQVlA4WAoAAAAgA
 export const Hero = () => {
   return (
     <article className={`flex items-center justify-between md:flex-row flex-col-reverse pt-12 container mx-auto`}>
-      <div className="my-2 max-w-lg">
+      <div className="my-2 max-w-2xl md:max-w-lg lg:max-w-xl">
         <h2 className="text-4xl text-center md:text-left">
           Este es un grupo para todos los desarrolladores, entusiastas y apasionados por Javascript en Barranquilla y la costa.
         </h2>

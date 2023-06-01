@@ -1,5 +1,3 @@
-import cn from 'classnames';
-
 import { ClientStyleHelper } from '@/components';
 import '@/styles/globals.css';
 import '@/styles/colors.css';
@@ -11,8 +9,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = returnMetadata({});
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  console.log(firaCode.className);
   return (
-    <html className={cn(firaCode.className, dmSans.className)} lang="es">
+    <html className={`${firaCode.variable} ${dmSans.variable}`} lang="es">
       <head />
       <body>
         <ClientStyleHelper />
