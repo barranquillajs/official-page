@@ -20,6 +20,16 @@ export type UserType = {
   githubLink?: string;
 };
 
+export type EventType = {
+  name: string;
+  image?: {
+    url?: string;
+  };
+  imageBlurUrl: string;
+  speakersId: Array<string>;
+  eventLink: string;
+};
+
 export const SPONSOR_LEVEL = {
   DIAMOND: { name: 'DIAMOND', width: 200 },
   GOLD: { name: 'GOLD', width: 150 },

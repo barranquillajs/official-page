@@ -1,7 +1,21 @@
 import { gql } from '@apollo/client';
 import { client, UserType, USER_KIND } from '../utils';
 
-const query = gql`
+const GetUsersBasicQuery = gql`
+  query GetUsersBasic($userIds: [Int]!) {
+    userCollection(where: { id_in: $userIds }) {
+      items {
+        id
+        name
+        image {
+          url
+        }
+      }
+    }
+  }
+`;
+
+const GetUsersQuery = gql`
   query GetUsers($type: String!) {
     userCollection(where: { type_contains_some: [$type] }) {
       items {
@@ -25,7 +39,7 @@ const parseUsers = (data): Array<UserType> => {
 
 export const getSpeakers = async () => {
   try {
-    const { data } = await client.query({ query, variables: { type: USER_KIND.SPEAKER } });
+    const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.SPEAKER } });
     return parseUsers(data);
   } catch (error) {
     console.error(error);
@@ -35,8 +49,18 @@ export const getSpeakers = async () => {
 
 export const getOrganizers = async () => {
   try {
-    const { data } = await client.query({ query, variables: { type: USER_KIND.ORGANIZER } });
+    const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.ORGANIZER } });
     return parseUsers(data);
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
+export const getUsersBasic = async (userIds: Array<number>) => {
+  try {
+    const { data } = await client.query({ query: GetUsersBasicQuery, variables: { userIds } });
+    return parseUsers(data) as Array<Pick<UserType, 'id' | 'name' | 'image'>>;
   } catch (error) {
     console.error(error);
     return [];
