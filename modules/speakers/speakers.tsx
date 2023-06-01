@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import { ButtonContained } from '@makinox/makinox-ui';
 
-import { UserType } from '../../utils';
+import { UserType } from '@/utils';
 
 const classes = {
   imageContainer: cn('flex justify-center p-2'),

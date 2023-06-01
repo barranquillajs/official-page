@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Card, ButtonContained } from '@makinox/makinox-ui';
 
-import { LINK_BARRANQUILLA_MEETUP } from '../../constants';
-import { EventUserComposedType } from '../../controllers';
+import { LINK_BARRANQUILLA_MEETUP } from '@/constants';
+import { EventUserComposedType } from '@/controllers';
 
 export const Meetups = ({ events }: { events: Array<EventUserComposedType> }) => {
   return (

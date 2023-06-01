@@ -2,7 +2,7 @@ import { FaLinkedin, FaHome, FaGithubSquare } from 'react-icons/fa';
 import Image from 'next/image';
 import cn from 'classnames';
 
-import { UserType } from '../../utils';
+import { UserType } from '@/utils';
 
 const classes = {
   imageContainer: cn('flex justify-center p-2 ro'),

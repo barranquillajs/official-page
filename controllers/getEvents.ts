@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-import { client, EventType, UserType } from '../utils';
+import { client, EventType, UserType } from '@/utils';
 import { getUsersBasic } from './getUsers';
 
 export type EventUserComposedType = EventType & { speakersInfo: Array<Pick<UserType, 'id' | 'name' | 'image'>> };

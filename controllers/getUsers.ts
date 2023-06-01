@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-import { client, UserType, USER_KIND } from '../utils';
+import { client, UserType, USER_KIND } from '@/utils';
 
 const GetUsersBasicQuery = gql`
   query GetUsersBasic($userIds: [Int]!) {

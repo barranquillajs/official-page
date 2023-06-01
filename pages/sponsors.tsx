@@ -4,10 +4,8 @@ import { MdOutlineStackedBarChart } from 'react-icons/md';
 import { FaChartBar, FaLaptop, FaUsers } from 'react-icons/fa';
 
 import { ButtonContained } from '@makinox/makinox-ui';
-
-import { pricingData } from '../constants/pricing';
-import Helmet from '../components/helmet/helmet';
-import { Footer, Header } from '../components';
+import { Helmet, Footer, Header } from '@/components';
+import { pricingData } from '@/constants';
 
 export const initiativesData = [
   {

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Fragment } from 'react';
 import { ButtonContained } from '@makinox/makinox-ui';
 
-import { SponsorType, SPONSOR_LEVEL } from '../../utils';
+import { SponsorType, SPONSOR_LEVEL } from '@/utils';
 
 export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
   return (

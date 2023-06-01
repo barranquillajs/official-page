@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-import { client, SponsorType } from '../utils';
+import { client, SponsorType } from '@/utils';
 
 const query = gql`
   query {

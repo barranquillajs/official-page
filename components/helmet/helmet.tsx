@@ -30,4 +30,4 @@ const Helmet = ({
   );
 };
 
-export default Helmet;
+export { Helmet };

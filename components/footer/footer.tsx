@@ -12,7 +12,7 @@ import {
   LINK_BARRANQUILLA_TWITTER,
   LINK_BARRANQUILLA_WHATSAPP,
   LINK_BARRANQUILLA_YOUTUBE,
-} from '../../constants';
+} from '@/constants';
 
 const classes = {
   item: cn('ml-4 text-primary-500 text-2xl'),

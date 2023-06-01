@@ -6,3 +6,5 @@ export const LINK_BARRANQUILLA_INSTAGRAM = 'https://www.instagram.com/barranquil
 export const LINK_BARRANQUILLA_TIKTOK = 'https://www.tiktok.com/@barranquillajs';
 export const LINK_BARRANQUILLA_TWITCH = 'https://www.twitch.tv/barranquillajs';
 export const LINK_BARRANQUILLA_YOUTUBE = 'https://www.youtube.com/channel/UC5VPQwD2C6RlLbifNapzhJA';
+
+export * from './pricing';

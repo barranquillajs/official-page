@@ -12,8 +12,8 @@ import {
   LINK_BARRANQUILLA_TWITTER,
   LINK_BARRANQUILLA_WHATSAPP,
   LINK_BARRANQUILLA_YOUTUBE,
-} from '../../constants';
-import headerimage from '../../public/assets/BAQJS.png';
+} from '@/constants';
+import headerimage from '@/public/assets/BAQJS.png';
 
 const classes = {
   item: cn('ml-4 my-1 text-xl'),

@@ -1,8 +1,7 @@
-import { EventUserComposedType, getAllSponsors, getEvents, getOrganizers, getSpeakers } from '../controllers';
-import { InfoSection, Meetups, Sponsor, Speakers, Staff, Hero } from '../modules';
-import Helmet from '../components/helmet/helmet';
-import { SponsorType, UserType } from '../utils';
-import { Footer, Header } from '../components';
+import { EventUserComposedType, getAllSponsors, getEvents, getOrganizers, getSpeakers } from '@/controllers';
+import { InfoSection, Meetups, Sponsor, Speakers, Staff, Hero } from '@/modules';
+import { Footer, Header, Helmet } from '@/components';
+import { SponsorType, UserType } from '@/utils';
 
 export default function Home({
   sponsors,
