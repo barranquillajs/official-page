@@ -12,7 +12,7 @@ export const metadata: Metadata = returnMetadata({});
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html className={cn(firaCode.className, dmSans.className)} lang="es_CO">
+    <html className={cn(firaCode.className, dmSans.className)} lang="es">
       <head />
       <body>
         <ClientStyleHelper />
