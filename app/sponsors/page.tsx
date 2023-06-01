@@ -6,7 +6,8 @@ import { MdOutlineStackedBarChart } from 'react-icons/md';
 import { ButtonContained } from '@makinox/makinox-ui';
 
 import { initiativesData, pricingData } from '@/constants';
-import { Helmet, Footer, Header } from '@/components';
+import { Footer, Header } from '@/components';
+import { returnMetadata } from '@/utils';
 
 const classes = {
   pageSbutitle: cn('text-3xl text-center mb-14 mt-24'),
@@ -20,10 +21,11 @@ const classes = {
   planCardList: cn('list-disc pl-4'),
 };
 
+export const metadata = returnMetadata({ title: 'Haz parte de nuestros sponsors - Barranquilla JS' });
+
 export default function Sponsors() {
   return (
     <section>
-      <Helmet title="Haz parte de nuestros sponsors - Barranquilla JS" />
       <Header />
       <div className="container mx-auto xl:px-48">
         <div>
