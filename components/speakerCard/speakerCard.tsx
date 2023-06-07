@@ -19,7 +19,14 @@ export const SpeakerCard = ({ speaker }: { speaker: UserType }) => {
       {hasPhoto ? (
         <div className={classes.imageContainer}>
           <div className={classes.imageWrapper}>
-            <Image src={speaker.image.url} alt={`Charlista ${speaker.name}`} width={112} height={112} className="rounded-full" />
+            <Image
+              src={speaker.image.url}
+              blurDataURL={speaker?.imageBlurUrl}
+              alt={`Charlista ${speaker.name}`}
+              width={112}
+              height={112}
+              className="rounded-full"
+            />
           </div>
         </div>
       ) : (

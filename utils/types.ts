@@ -15,6 +15,7 @@ export type UserType = {
   image?: {
     url?: string;
   };
+  imageBlurUrl?: string;
   homePage?: string;
   linkedinLink?: string;
   githubLink?: string;

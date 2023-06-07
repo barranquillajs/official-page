@@ -24,12 +24,15 @@ export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
               <div className="bg-primary-50 flex justify-center rounded-xl gap-2">
                 {currentSponsor?.map((sponsor) => (
                   <article key={sponsor.name} className="flex flex-col justify-center items-center">
-                    <div className="flex justify-center pt-2 items-center" style={{ width: SPONSOR_LEVEL[level].size }}>
+                    <div
+                      className="flex justify-center pt-2 items-center rounded-full"
+                      style={{ width: SPONSOR_LEVEL[level].size, height: SPONSOR_LEVEL[level].size }}
+                    >
                       <Image
                         width={SPONSOR_LEVEL[level].size}
                         height={SPONSOR_LEVEL[level].size}
                         blurDataURL={sponsor.logoRaw}
-                        className="rounded-full w-auto h-auto"
+                        className="rounded-full"
                         src={sponsor.logo.url}
                         alt="Asistentes del meetup de barranquilla JS"
                       />

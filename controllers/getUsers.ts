@@ -10,6 +10,7 @@ const GetUsersBasicQuery = gql`
         image {
           url
         }
+        imageBlurUrl
       }
     }
   }

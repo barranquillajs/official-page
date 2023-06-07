@@ -26,6 +26,7 @@ export const Staff = ({ organizers }: { organizers: Array<UserType> }) => {
                   <div className={classes.imageWrapper}>
                     <Image
                       src={staff.image.url}
+                      blurDataURL={staff?.imageBlurUrl}
                       alt={`Organizador de la comunidad: ${staff.name}`}
                       width={112}
                       height={112}
