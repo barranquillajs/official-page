@@ -17,15 +17,8 @@ jobs:
         with:
           node-version: 18.16.0
 
-      - name: Read version from package.json
-        uses: culshaw/read-package-node-version-actions@v1
-        id: package-node-version
-
       - name: Install
-        env:
-          VERSION: ${{ steps.package-node-version.outputs.version }}
         run: |
-          echo "Version is ${{ env.VERSION }}"
           yarn install
 
       - name: Linter check
