@@ -28,10 +28,6 @@ jobs:
           echo "Version is ${{ env.VERSION }}"
           yarn install
 
-      - name: Build
-        run: |
-          yarn build
-
       - name: Linter check
         run: |
           yarn lint
