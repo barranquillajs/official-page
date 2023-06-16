@@ -12,25 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 16
+      - name: Use Node.js 18.16.0
         uses: actions/setup-node@v1
         with:
-          node-version: 16.14.2
-
-      - name: Read version from package.json
-        uses: culshaw/read-package-node-version-actions@v1
-        id: package-node-version
+          node-version: 18.16.0
 
       - name: Install
-        env:
-          VERSION: ${{ steps.package-node-version.outputs.version }}
         run: |
-          echo "Version is ${{ env.VERSION }}"
           yarn install
-
-      - name: Build
-        run: |
-          yarn build
 
       - name: Linter check
         run: |

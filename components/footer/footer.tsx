@@ -1,4 +1,4 @@
-import { FaInstagramSquare, FaLinkedin, FaMeetup, FaTiktok, FaTwitterSquare, FaWhatsapp, FaYoutubeSquare, FaTwitch } from 'react-icons/fa';
+import { FaInstagramSquare, FaLinkedin, FaMeetup, FaTiktok, FaTwitterSquare, FaDiscord, FaYoutubeSquare, FaTwitch } from 'react-icons/fa';
 import cn from 'classnames';
 
 import {
@@ -8,7 +8,7 @@ import {
   LINK_BARRANQUILLA_TIKTOK,
   LINK_BARRANQUILLA_TWITCH,
   LINK_BARRANQUILLA_TWITTER,
-  LINK_BARRANQUILLA_WHATSAPP,
+  LINK_BARRANQUILLA_DISCORD,
   LINK_BARRANQUILLA_YOUTUBE,
 } from '@/constants';
 
@@ -26,8 +26,8 @@ export const Footer = () => {
             <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer" aria-label="Link hacia meetup">
               <FaMeetup />
             </a>
-            <a className={classes.item} href={LINK_BARRANQUILLA_WHATSAPP} target="_blank" rel="noreferrer" aria-label="Link hacia whatsapp">
-              <FaWhatsapp />
+            <a className={classes.item} href={LINK_BARRANQUILLA_DISCORD} target="_blank" rel="noreferrer" aria-label="Link hacia discord">
+              <FaDiscord />
             </a>
             <a className={classes.item} href={LINK_BARRANQUILLA_TIKTOK} target="_blank" rel="noreferrer" aria-label="Link hacia tiktok">
               <FaTiktok />
