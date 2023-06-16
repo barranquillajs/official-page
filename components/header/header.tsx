@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaTwitterSquare, FaLinkedin, FaWhatsapp, FaMeetup, FaInstagramSquare, FaTiktok, FaTwitch, FaYoutubeSquare } from 'react-icons/fa';
+import { FaTwitterSquare, FaLinkedin, FaMeetup, FaInstagramSquare, FaTiktok, FaTwitch, FaYoutubeSquare, FaDiscord } from 'react-icons/fa';
 
 import {
   LINK_BARRANQUILLA_INSTAGRAM,
@@ -10,8 +10,8 @@ import {
   LINK_BARRANQUILLA_TIKTOK,
   LINK_BARRANQUILLA_TWITCH,
   LINK_BARRANQUILLA_TWITTER,
-  LINK_BARRANQUILLA_WHATSAPP,
   LINK_BARRANQUILLA_YOUTUBE,
+  LINK_BARRANQUILLA_DISCORD,
 } from '@/constants';
 import headerimage from '@/public/assets/BAQJS.png';
 
@@ -32,8 +32,8 @@ export const Header = () => {
           <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer" aria-label="Link hacia meetup">
             <FaMeetup />
           </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_WHATSAPP} target="_blank" rel="noreferrer" aria-label="Link hacia whatsapp">
-            <FaWhatsapp />
+          <a className={classes.item} href={LINK_BARRANQUILLA_DISCORD} target="_blank" rel="noreferrer" aria-label="Link hacia discord">
+            <FaDiscord />
           </a>
           <a className={classes.item} href={LINK_BARRANQUILLA_TIKTOK} target="_blank" rel="noreferrer" aria-label="Link hacia tiktok">
             <FaTiktok />
