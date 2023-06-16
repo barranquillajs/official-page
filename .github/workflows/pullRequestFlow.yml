@@ -12,10 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 16
+      - name: Use Node.js 18.16.0
         uses: actions/setup-node@v1
         with:
-          node-version: 16.14.2
+          node-version: 18.16.0
 
       - name: Read version from package.json
         uses: culshaw/read-package-node-version-actions@v1
