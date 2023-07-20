@@ -1,60 +1,96 @@
-import cn from 'classnames';
+'use client';
+
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaTwitterSquare, FaLinkedin, FaMeetup, FaInstagramSquare, FaTiktok, FaTwitch, FaYoutubeSquare, FaDiscord } from 'react-icons/fa';
+import cn from 'classnames';
 
-import {
-  LINK_BARRANQUILLA_INSTAGRAM,
-  LINK_BARRANQUILLA_LINKEDIN,
-  LINK_BARRANQUILLA_MEETUP,
-  LINK_BARRANQUILLA_TIKTOK,
-  LINK_BARRANQUILLA_TWITCH,
-  LINK_BARRANQUILLA_TWITTER,
-  LINK_BARRANQUILLA_YOUTUBE,
-  LINK_BARRANQUILLA_DISCORD,
-} from '@/constants';
-import headerimage from '@/public/assets/BAQJS.png';
+import bqjsLogo from '@/public/assets/BAQJS.svg';
+import bqjsPartialLogo from '@/public/assets/BAQJS-partial.svg';
 
 const classes = {
-  item: cn('text-2xl'),
+  link: cn('font-bold text-lg text-end'),
 };
 
 export const Header = () => {
-  return (
-    <header className={`flex justify-center bg-primary-400 top-0 z-10 md:sticky shadow shadow-secondary-300/40`}>
-      <nav className={`container flex flex-col justify-center md:flex-row md:justify-between items-center py-2`}>
-        <Link href="/" className="flex items-center">
-          <Image className="rounded-md w-12 h-12" src={headerimage} alt="BarranquillaJS logo" />
-          <h1 className="text-2xl">Barranquilla JS</h1>
-        </Link>
+  const [isAtTop, setIsAtTop] = useState(true);
 
-        <div className="flex gap-4 my-4">
-          <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer" aria-label="Link hacia meetup">
-            <FaMeetup />
-          </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_DISCORD} target="_blank" rel="noreferrer" aria-label="Link hacia discord">
-            <FaDiscord />
-          </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_TIKTOK} target="_blank" rel="noreferrer" aria-label="Link hacia tiktok">
-            <FaTiktok />
-          </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_TWITCH} target="_blank" rel="noreferrer" aria-label="Link hacia twitch">
-            <FaTwitch />
-          </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_TWITTER} target="_blank" rel="noreferrer" aria-label="Link hacia twitter">
-            <FaTwitterSquare />
-          </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_LINKEDIN} target="_blank" rel="noreferrer" aria-label="Link hacia linkedin">
-            <FaLinkedin />
-          </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_INSTAGRAM} target="_blank" rel="noreferrer" aria-label="Link hacia instagram">
-            <FaInstagramSquare />
-          </a>
-          <a className={classes.item} href={LINK_BARRANQUILLA_YOUTUBE} target="_blank" rel="noreferrer" aria-label="Link hacia youtube">
-            <FaYoutubeSquare />
-          </a>
+  const renderClasses = {
+    container: cn('top-0 z-10 md:sticky', {
+      'bg-base-100/70 backdrop-blur-md': !isAtTop,
+    }),
+    headerImage: cn('rounded-md h-28', {
+      'h-28 w-28': isAtTop,
+      'h-30': !isAtTop,
+    }),
+  };
+
+  const headerImage = isAtTop ? bqjsLogo : bqjsPartialLogo;
+
+  const handleScroll = () => {
+    const isTop = window.scrollY === 0;
+    setIsAtTop(isTop);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header className={cn(renderClasses.container)}>
+      <nav className="container navbar mx-auto">
+        <div className="flex-1">
+          <Link href="/" className="flex items-center">
+            <Image className={renderClasses.headerImage} src={headerImage} alt="BarranquillaJS logo" />
+          </Link>
+        </div>
+
+        <div className="flex-none">
+          <div className="flex lg:hidden dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="inline-block w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </label>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 gap-2 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <NavbarList />
+            </ul>
+          </div>
+          <ul className="menu menu-horizontal items-center hidden lg:flex gap-2">
+            <NavbarList />
+          </ul>
         </div>
       </nav>
     </header>
   );
 };
+
+const NavbarList = () => (
+  <>
+    <li>
+      <Link className={classes.link} href="/">
+        Eventos
+      </Link>
+    </li>
+    <li>
+      <Link className={classes.link} href="/sponsors">
+        Patrocinadores
+      </Link>
+    </li>
+    <li>
+      <Link className={classes.link} href="/">
+        Organizadores
+      </Link>
+    </li>
+    <li>
+      <Link className={classes.link} href="/">
+        Héroes
+      </Link>
+    </li>
+
+    <Link href="/sponsors" className={(classes.link, 'btn btn-primary')}>
+      Únete ahora
+    </Link>
+  </>
+);
