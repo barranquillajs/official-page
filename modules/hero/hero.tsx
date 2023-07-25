@@ -18,23 +18,23 @@ import {
 const imageBlurUrl = `data:image/webp;base64,UklGRjQDAABXRUJQVlA4WAoAAAAgAAAAuQAAuQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggRgEAAFAQAJ0BKroAugA/cbjRZLSuqSkgSgKQLgllbt1eEx8kfQBQlkXOHIjC5pHOYzZLKxHbBOJ/v21BDJx3dZChAWO/f8nxFXAd/UNlYUCNwEvek3auXfgl1xbJx165kIxUIp62HLowef+C5Py5gepl7WyH6kLbeMucVxz+wLNo02FFTyW/xo00YYx4OXAA/ukkf/7F+wP4lnVVX7fI5w9WUOQmN1yZ4zL8U/JEPibX1yDxlUa0vXx8KQPOMJhL12zzxUHx8fANPvURgbrGHfeXohqN9dMuW4rcBZkOkr2bRpz29P+ZL23a5ZdLPUUzYDoosYLAIxkClmgXqwzJGQEnKPJy4JQ6wGCM61bpTa7bvvDVtpven+f1mfP0aAgDUmnIriD9AISuD+Kr+omCc8RpHtGMwENJiUz6QeVEb2PhvcOTlA3IAAAA`;
 
 const classes = {
-  item: cn('ml-4 text-primary-500 text-2xl'),
+  item: cn('text-primary-500 text-2xl'),
 };
 
 export const Hero = () => {
   return (
     <>
-      <article className={`flex items-center justify-between md:flex-row flex-col-reverse container mx-auto`}>
-        <div className="my-2 max-w-2xl md:max-w-lg lg:max-w-xl">
-          <h1 className="text-4xl text-center md:text-left">¿Te apasiona Javascript?</h1>
-          <p>Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa</p>
+      <article className="flex items-center justify-between md:flex-row flex-col-reverse container mx-auto my-20">
+        <div className="max-w-2xl md:max-w-lg lg:max-w-2xl">
+          <h1 className="text-[90px] font-bold leading-[97px] text-center md:text-left">¿Te apasiona Javascript?</h1>
+          <p className="font-normal leading-10 text-2xl my-6">Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa</p>
           <button className="btn btn-primary">
             <span>Unirme a la comunidad</span>
             <BsChevronRight />
           </button>
           <div>
-            <h3>Síguenos en nuestras redes</h3>
-            <div className="flex justify-start">
+            <h3 className="text-xl mt-8 mb-4">Síguenos en nuestras redes</h3>
+            <div className="flex justify-start gap-8">
               <a className={classes.item} href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer" aria-label="Link hacia meetup">
                 <FaMeetup />
               </a>
