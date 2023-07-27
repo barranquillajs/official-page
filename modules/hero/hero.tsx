@@ -24,9 +24,9 @@ const classes = {
 export const Hero = () => {
   return (
     <>
-      <article className="flex items-center justify-between md:flex-row flex-col-reverse container mx-auto my-20">
-        <div className="max-w-2xl md:max-w-lg lg:max-w-2xl">
-          <h1 className="text-[90px] font-bold leading-[97px] text-center md:text-left">¿Te apasiona Javascript?</h1>
+      <article className="flex items-center lg:items-end justify-between lg:flex-row flex-col-reverse container mx-auto lg:my-20">
+        <div className="max-w-2xl lg:max-w-2xl">
+          <h1 className="text-[90px] font-bold leading-[97px] text-center lg:text-left">¿Te apasiona Javascript?</h1>
           <p className="font-normal leading-10 text-2xl my-6">Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa</p>
           <button className="btn btn-primary">
             <span>Unirme a la comunidad</span>
@@ -64,7 +64,7 @@ export const Hero = () => {
         </div>
         <div>
           <Image
-            width={500}
+            width={800}
             priority={true}
             placeholder="blur"
             blurDataURL={imageBlurUrl}
