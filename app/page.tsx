@@ -14,9 +14,9 @@ const Home = async () => {
     <section>
       <Header />
       <Hero />
+      <Sponsor sponsors={sponsors} />
       <InfoSection />
       <Meetups events={events} />
-      <Sponsor sponsors={sponsors} />
       <Staff organizers={organizers} />
       <Speakers speakers={speakers} />
       <Footer />
