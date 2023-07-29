@@ -4,9 +4,11 @@ import cn from 'classnames';
 
 import { UserType } from '@/utils';
 
+const imageSize = 193;
+
 const classes = {
-  imageContainer: cn('flex justify-center p-2 ro'),
-  imageWrapper: cn('flex bg-base-white w-32 h-32 justify-center items-center rounded-full'),
+  imageContainer: cn('flex justify-center p-2 rounded-full border-2 border-neutral-700'),
+  imageWrapper: cn('flex bg-base-white justify-center items-center rounded-full'),
   link: cn('p-2'),
   icons: 20,
 };
@@ -17,25 +19,24 @@ export const Staff = ({ organizers }: { organizers: Array<UserType> }) => {
       <div>
         <h2 className="text-3xl text-center">Organizadores</h2>
       </div>
-      <div className="flex justify-center flex-wrap mt-8">
+      <div className="flex justify-between flex-wrap mt-8">
         {organizers.map((staff) => {
           return (
-            <article key={staff.name} className="bg-primary-50 w-64 rounded-md m-4">
-              <div>
-                <div className={classes.imageContainer}>
-                  <div className={classes.imageWrapper}>
-                    <Image
-                      src={staff.image.url}
-                      blurDataURL={staff?.imageBlurUrl}
-                      alt={`Organizador de la comunidad: ${staff.name}`}
-                      width={112}
-                      height={112}
-                      className="rounded-full"
-                    />
-                  </div>
+            <article key={staff.name} className="bg-primary-50 rounded-md m-4">
+              <div className={classes.imageContainer}>
+                <div className={classes.imageWrapper} style={{ width: imageSize, height: imageSize }}>
+                  <Image
+                    src={staff.image.url}
+                    blurDataURL={staff?.imageBlurUrl}
+                    alt={`Organizador de la comunidad: ${staff.name}`}
+                    width={imageSize}
+                    height={imageSize}
+                    className="rounded-full"
+                  />
                 </div>
               </div>
-              <div className="p-2 text-center">
+
+              <div className="text-center font-bold text-lg my-4">
                 <span>{staff.name}</span>
               </div>
               <div className="flex justify-center h-10">
