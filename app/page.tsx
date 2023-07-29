@@ -15,8 +15,10 @@ const Home = async () => {
       <Header />
       <Hero />
       <Sponsor sponsors={sponsors} />
-      <Meetups events={events} />
-      <InfoSection />
+      <div className="container mx-auto flex flex-col lg:flex-row lg:items-center mt-20">
+        <Meetups events={events} />
+        <InfoSection />
+      </div>
       <Staff organizers={organizers} />
       <Speakers speakers={speakers} />
       <Footer />

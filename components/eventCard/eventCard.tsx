@@ -11,10 +11,10 @@ export const EventCard = ({ event }: { event: EventUserComposedType }) => {
     <Link
       href={event.eventLink}
       target="_blank"
-      className="flex py-3 px-4 bg-base-100 shadow-lg gap-4 rounded-md min-w-xl max-w-xl cursor-pointer"
+      className="flex items-center py-3 px-4 bg-base-100 shadow-lg gap-4 rounded-md min-w-xl w-full cursor-pointer"
       key={event.name}
     >
-      <div className="relative flex rounded-md" style={{ width: imageWidth, height: imageHeight }}>
+      <div className="relative flex rounded-md" style={{ width: imageWidth, height: imageHeight, minWidth: imageWidth }}>
         <Image
           className="object-cover rounded-md"
           src={event.image.url}
@@ -28,7 +28,7 @@ export const EventCard = ({ event }: { event: EventUserComposedType }) => {
         />
       </div>
 
-      <div className="flex max-w-xs flex-col justify-between">
+      <div className="flex max-w-md flex-col justify-between h-max">
         <h3 className="font-bold text-lg">{event.name}</h3>
 
         <p>
