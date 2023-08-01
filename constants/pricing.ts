@@ -1,10 +1,22 @@
 export enum PLANS {
+  Neutral,
   Silver = 'Silver',
   Gold = 'Gold',
   Diamond = 'Diamond',
 }
 
 export const pricingData = [
+  {
+    title: PLANS.Neutral,
+    price: 'Desde $100.000',
+    perks: [
+      'Logo grande en la página',
+      '10 sillas reservadas en los eventos del meetup',
+      'Espacio de 5 a 10 minutos en los eventos del meetup (charla corta o video)',
+      'Repartir stickers de empresa y folletos de información',
+      'Compartimos codigo QR o link de promociones o servicios',
+    ],
+  },
   {
     title: PLANS.Silver,
     price: '$80.000',
