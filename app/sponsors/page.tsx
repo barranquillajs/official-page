@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { PiDiamondsFour } from 'react-icons/pi';
 import { FaRegCheckCircle } from 'react-icons/fa';
 
@@ -6,6 +7,15 @@ import { pricingData } from '@/constants';
 import { returnMetadata } from '@/utils';
 
 const currentPlan = pricingData[0];
+
+const classes = {
+  yellowIcon: cn('bg-primary text-stone-900 p-3 rounded-2xl'),
+  analyticTitle: cn('text-3xl font-medium mt-20 mb-8 text-center lg:text-left'),
+  analyticDivider: cn('flex flex-col items-center lg:items-start gap-8 lg:flex-row lg:justify-between'),
+  analyticCard: cn('flex gap-4 items-start py-5 px-10 rounded-md shadow-xl w-[470px] max-w-[470px] min-w-[470px]'),
+  analyticCardTitle: cn('text-xl font-bold mb-1'),
+  analyticCardText: cn('w-80 max-w-xs text-base font-normal'),
+};
 
 export const metadata = returnMetadata({ title: 'Haz parte de nuestros sponsors - Barranquilla JS' });
 
@@ -16,6 +26,7 @@ export default function Sponsors() {
       <div className="container mx-auto xl:px-48">
         <PrincipalSection />
         <PlanSection />
+        <AnalyticsSection />
       </div>
 
       <Footer />
@@ -24,19 +35,19 @@ export default function Sponsors() {
 }
 
 const PrincipalSection = () => (
-  <div>
+  <section>
     <h1 className="text-5xl sm:text-8xl mb-12 mt-32 text-left font-bold w-4/5">Haz parte de nuestros sponsors</h1>
     <p className="text-xl mb-8 text-left font-normal">
       En BarranquillaJs, creemos en el poder de las conferencias impulsadas por la comunidad para avanzar en el mundo del desarrollo de software. Al
       centrarnos en el talento local y el intercambio de conocimientos,estamos creando una plataforma para que tanto desarrolladores como cualquier
       persona crezca profecionalmente.
     </p>
-  </div>
+  </section>
 );
 
 const PlanSection = () => (
-  <div className="flex flex-col items-center">
-    <h2 className="text-4xl font-bold text-slate-800 mb-9 mt-16">Bienvenid@ a nuestra comunidad</h2>
+  <section className="flex flex-col items-center">
+    <h2 className="text-4xl font-bold mb-9 mt-16">Bienvenid@ a nuestra comunidad</h2>
     <div className="py-5 px-7 bg-base-100 rounded-3xl shadow-xl w-fit">
       <div className="flex items-center gap-3 border-b border-b-gray-200 pb-5 mb-5">
         <span className="bg-emerald-500 text-white p-3 rounded-lg">
@@ -60,5 +71,60 @@ const PlanSection = () => (
         Contáctanos
       </a>
     </div>
-  </div>
+  </section>
+);
+
+const AnalyticsSection = () => (
+  <>
+    <section>
+      <h2 className={classes.analyticTitle}>Nuestras iniciativas</h2>
+      <div className={classes.analyticDivider}>
+        <article className={classes.analyticCard}>
+          <span className={classes.yellowIcon}>
+            <PiDiamondsFour size={24} />
+          </span>
+          <div>
+            <h3 className={classes.analyticCardTitle}>Charlas mensuales</h3>
+            <p className={classes.analyticCardText}>
+              Son dos charlas de aproximadamente 40 minutos de duración, que se van a dar el mismo día. Estas charlas están propuestas por los
+              miembros de la comunidad que quieren compartir su conocimiento.
+            </p>
+          </div>
+        </article>
+        <article className={classes.analyticCard}>
+          <span className={classes.yellowIcon}>
+            <PiDiamondsFour size={24} />
+          </span>
+          <div>
+            <h3 className={classes.analyticCardTitle}>Taller mensual</h3>
+            <p className={classes.analyticCardText}>
+              Es un taller práctico sobre alguna tecnología particular dictado por alguno de los expertos de la comunidad, el evento puede durar unas
+              tres horas.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section>
+      <h2 className={classes.analyticTitle}>Estadísticas</h2>
+      <div className={classes.analyticDivider}>
+        <article className={classes.analyticCard}>
+          <span className={classes.yellowIcon}>
+            <PiDiamondsFour size={24} />
+          </span>
+          <div>
+            <h3 className={classes.analyticCardTitle}>Dos reuniones al mes</h3>
+          </div>
+        </article>
+        <article className={classes.analyticCard}>
+          <span className={classes.yellowIcon}>
+            <PiDiamondsFour size={24} />
+          </span>
+          <div>
+            <h3 className={classes.analyticCardTitle}>Mas de 50 asistentes a cada evento</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+  </>
 );
