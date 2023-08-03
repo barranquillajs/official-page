@@ -10,7 +10,7 @@ const classes = {
 export const InfoSection = () => {
   return (
     <section className="flex flex-col justify-center items-center w-full m-auto md:max-w-lg lg:w-1/2 gap-8">
-      <article className={classes.item}>
+      <article className={cn(classes.item, 'border-b-2 pb-10 pt-10 lg:pt-0')}>
         <h2 className={classes.title}>Haz parte de nuestros sponsors</h2>
         <p className={classes.parragraph}>Apoyanos, crezcamos juntos, mejoremos este comunidad entre todos.</p>
         <Link href="/sponsors" className="btn btn-primary">

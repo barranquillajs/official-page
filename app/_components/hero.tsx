@@ -22,16 +22,18 @@ export const Hero = () => {
   return (
     <>
       <article className="flex items-center lg:items-end justify-between lg:flex-row flex-col-reverse container mx-auto lg:my-20">
-        <div className="max-w-2xl lg:max-w-2xl">
-          <h1 className="text-[90px] font-bold leading-[97px] text-center lg:text-left">¿Te apasiona Javascript?</h1>
-          <p className="font-normal leading-10 text-2xl my-6">Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa</p>
-          <button className="btn btn-primary">
+        <div className="max-w-2xl lg:max-w-2xl w-full">
+          <h1 className="text-5xl md:text-[90px] font-bold md:leading-[97px] text-center lg:text-left">¿Te apasiona Javascript?</h1>
+          <p className="font-normal text-base md:leading-10 md:text-2xl my-6">
+            Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa
+          </p>
+          <button className="btn btn-primary flex-nowrap">
             <span>Unirme a la comunidad</span>
-            <Icon icon={IconCatalog.right} />
+            <Icon className="mt-1" width={20} height={20} icon={IconCatalog.right} />
           </button>
           <div>
             <h3 className="text-xl mt-8 mb-4">Síguenos en nuestras redes</h3>
-            <div className="flex justify-start gap-8">
+            <div className="flex justify-start gap-8 flex-wrap">
               <a className={classes.item} href={LINK_BARRANQUILLA_DISCORD} target="_blank" rel="noreferrer" aria-label="Link hacia discord">
                 <Icon icon={IconCatalog.discord} />
               </a>
