@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { PiDiamondsFour } from 'react-icons/pi';
 
+import { Icon, IconCatalog } from '@/components';
 import { SponsorType } from '@/utils';
 
 const logoSize = 180;
@@ -10,7 +10,7 @@ export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
     <section className="container mx-auto pt-20">
       <div className="flex flex-col items-start justify-start md:flex-row md:justify-between md:items-center gap-2">
         <div className="flex items-center justify-start gap-2">
-          <PiDiamondsFour size={24} className="text-emerald-500" />
+          <Icon className="text-emerald-500 mt-1" icon={IconCatalog.diamond} />
           <h3 className="font-bold text-gray-600">Sponsors</h3>
         </div>
         <div className="flex gap-11 flex-wrap justify-center">

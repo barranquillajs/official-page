@@ -1,7 +1,7 @@
-import { FaLinkedin, FaHome, FaGithubSquare } from 'react-icons/fa';
 import Image from 'next/image';
 import cn from 'classnames';
 
+import { Icon, IconCatalog } from '@/components';
 import { UserType } from '@/utils';
 
 const imageSize = 193;
@@ -42,17 +42,17 @@ export const Staff = ({ organizers }: { organizers: Array<UserType> }) => {
               <div className="flex justify-center h-10">
                 {staff?.homePage && (
                   <a className={classes.link} href={staff.homePage} target="_blank" rel="noreferrer" aria-label="Website">
-                    <FaHome size={classes.icons} />
+                    <Icon icon={IconCatalog.home} />
                   </a>
                 )}
                 {staff?.githubLink && (
                   <a className={classes.link} href={staff.githubLink} target="_blank" rel="noreferrer" aria-label="Github">
-                    <FaGithubSquare size={classes.icons} />
+                    <Icon icon={IconCatalog.github} />
                   </a>
                 )}
                 {staff?.linkedinLink && (
                   <a className={classes.link} href={staff.linkedinLink} target="_blank" rel="noreferrer" aria-label="Linkedin">
-                    <FaLinkedin size={classes.icons} />
+                    <Icon icon={IconCatalog.linkedin} />
                   </a>
                 )}
               </div>

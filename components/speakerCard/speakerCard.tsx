@@ -1,7 +1,7 @@
-import { FaLinkedin, FaHome, FaGithubSquare, FaUserAlt } from 'react-icons/fa';
 import Image from 'next/image';
 import cn from 'classnames';
 
+import { Icon, IconCatalog } from '@/components';
 import { UserType } from '@/utils';
 
 const imageSize = 130;
@@ -34,7 +34,7 @@ export const SpeakerCard = ({ speaker }: { speaker: UserType }) => {
       ) : (
         <div className={classes.imageContainer}>
           <div className={classes.imageWrapper} style={{ width: imageSize, height: imageSize }}>
-            <FaUserAlt size={40} />
+            <Icon icon={IconCatalog.github} />
           </div>
         </div>
       )}
@@ -44,17 +44,17 @@ export const SpeakerCard = ({ speaker }: { speaker: UserType }) => {
       <div className="flex justify-center h-10">
         {speaker?.homePage && (
           <a className={classes.link} href={speaker.homePage} target="_blank" rel="noreferrer" aria-label={`Pagina web de ${speaker.name}`}>
-            <FaHome size={classes.icons} />
+            <Icon width={22} height={22} icon={IconCatalog.home} />
           </a>
         )}
         {speaker?.githubLink && (
           <a className={classes.link} href={speaker.githubLink} target="_blank" rel="noreferrer" aria-label={`Github de ${speaker.name}`}>
-            <FaGithubSquare size={classes.icons} />
+            <Icon width={22} height={22} icon={IconCatalog.github} />
           </a>
         )}
         {speaker?.linkedinLink && (
           <a className={classes.link} href={speaker.linkedinLink} target="_blank" rel="noreferrer" aria-label={`Linkedin de ${speaker.name}`}>
-            <FaLinkedin size={classes.icons} />
+            <Icon width={22} height={22} icon={IconCatalog.linkedin} />
           </a>
         )}
       </div>

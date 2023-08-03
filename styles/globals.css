@@ -30,8 +30,6 @@ a {
   text-decoration: none;
 }
 
-/* Helpers  */
-.container {
-  max-width: 1400px;
-  width: 100%;
+.btn {
+  @apply rounded-2xl;
 }

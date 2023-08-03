@@ -1,5 +1,5 @@
+import { Icon, IconCatalog } from '@/components';
 import cn from 'classnames';
-import { PiDiamondsFour } from 'react-icons/pi';
 
 const classes = {
   yellowIcon: cn('bg-primary text-stone-900 p-3 rounded-2xl'),
@@ -17,7 +17,7 @@ export const AnalyticsSection = () => (
       <div className={classes.analyticDivider}>
         <article className={classes.analyticCard}>
           <span className={classes.yellowIcon}>
-            <PiDiamondsFour size={24} />
+            <Icon icon={IconCatalog.diamond} viewBox="0 0 24 24" width={24} height={24} />
           </span>
           <div>
             <h3 className={classes.analyticCardTitle}>Charlas mensuales</h3>
@@ -29,7 +29,7 @@ export const AnalyticsSection = () => (
         </article>
         <article className={classes.analyticCard}>
           <span className={classes.yellowIcon}>
-            <PiDiamondsFour size={24} />
+            <Icon icon={IconCatalog.diamond} viewBox="0 0 24 24" width={24} height={24} />
           </span>
           <div>
             <h3 className={classes.analyticCardTitle}>Taller mensual</h3>
@@ -46,7 +46,7 @@ export const AnalyticsSection = () => (
       <div className={classes.analyticDivider}>
         <article className={classes.analyticCard}>
           <span className={classes.yellowIcon}>
-            <PiDiamondsFour size={24} />
+            <Icon icon={IconCatalog.diamond} viewBox="0 0 24 24" width={24} height={24} />
           </span>
           <div>
             <h3 className={classes.analyticCardTitle}>Dos reuniones al mes</h3>
@@ -54,7 +54,7 @@ export const AnalyticsSection = () => (
         </article>
         <article className={classes.analyticCard}>
           <span className={classes.yellowIcon}>
-            <PiDiamondsFour size={24} />
+            <Icon icon={IconCatalog.diamond} viewBox="0 0 24 24" width={24} height={24} />
           </span>
           <div>
             <h3 className={classes.analyticCardTitle}>Mas de 70 asistentes a cada evento</h3>

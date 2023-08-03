@@ -1,6 +1,4 @@
-import { PiDiamondsFour } from 'react-icons/pi';
-import { FaRegCheckCircle } from 'react-icons/fa';
-
+import { Icon, IconCatalog } from '@/components';
 import { pricingData } from '@/constants';
 
 const currentPlan = pricingData[0];
@@ -11,7 +9,7 @@ export const PlanSection = () => (
     <div className="py-5 px-7 bg-base-100 rounded-3xl shadow-xl w-fit">
       <div className="flex items-center gap-3 border-b border-b-gray-200 pb-5 mb-5">
         <span className="bg-emerald-500 text-white p-3 rounded-lg">
-          <PiDiamondsFour size={24} />
+          <Icon viewBox="0 0 24 24" width={24} height={24} icon={IconCatalog.diamond} />
         </span>
         <div>
           <h3 className="font-bold text-xl">Sponsorships</h3>
@@ -22,7 +20,7 @@ export const PlanSection = () => (
       <ul>
         {currentPlan.perks.map((perk) => (
           <li key={perk} className="flex items-center mb-5 gap-2">
-            <FaRegCheckCircle />
+            <Icon viewBox="0 0 18 18" width={18} height={18} icon={IconCatalog.check} />
             <p>{perk}</p>
           </li>
         ))}
