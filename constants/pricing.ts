@@ -11,6 +11,7 @@ export const pricingData = [
     price: 'Desde $100.000',
     perks: [
       'Logo grande en la página',
+      'Logo en las publicaciones',
       '10 sillas reservadas en los eventos del meetup',
       'Espacio de 5 a 10 minutos en los eventos del meetup (charla corta o video)',
       'Repartir stickers de empresa y folletos de información',

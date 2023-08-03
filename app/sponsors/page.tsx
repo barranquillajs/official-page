@@ -3,10 +3,10 @@ import Image from 'next/image';
 import { PiDiamondsFour } from 'react-icons/pi';
 import { FaRegCheckCircle } from 'react-icons/fa';
 
-import { getAllSponsors } from '@/controllers';
-import { Footer, Header } from '@/components';
-import { pricingData } from '@/constants';
+import { Footer, GradientBackground, Header } from '@/components';
 import { returnMetadata, SponsorType } from '@/utils';
+import { getAllSponsors } from '@/controllers';
+import { pricingData } from '@/constants';
 
 const logoSize = 180;
 const currentPlan = pricingData[0];
@@ -15,7 +15,7 @@ const classes = {
   yellowIcon: cn('bg-primary text-stone-900 p-3 rounded-2xl'),
   analyticTitle: cn('text-3xl font-medium mt-20 mb-8 text-center lg:text-left'),
   analyticDivider: cn('flex flex-col items-center lg:items-start gap-8 lg:flex-row lg:justify-between'),
-  analyticCard: cn('flex gap-4 items-start py-5 px-2 md:px-10 rounded-md shadow-xl md:w-[470px] md:max-w-[470px] md:min-w-[470px]'),
+  analyticCard: cn('flex gap-4 items-start py-5 px-2 md:px-10 bg-base-100 rounded-md shadow-xl md:w-[470px] md:max-w-[470px] md:min-w-[470px]'),
   analyticCardTitle: cn('text-xl font-bold mb-1'),
   analyticCardText: cn('md:w-80 max-w-xs text-base font-normal'),
 };
@@ -28,6 +28,7 @@ const Sponsors = async () => {
 
   return (
     <section>
+      <GradientBackground />
       <Header />
       <div className="container mx-auto xl:px-48">
         <PrincipalSection />
