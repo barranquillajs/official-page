@@ -31,8 +31,7 @@ module.exports = {
       colors,
     },
     fontFamily: {
-      display: ['Fira Code'],
-      body: ['DM Sans'],
+      display: ['Ubuntu'],
     },
   },
   plugins: [daisyPlugin],

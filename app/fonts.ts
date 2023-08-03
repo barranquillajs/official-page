@@ -1,13 +1,7 @@
-import { Fira_Code, DM_Sans } from 'next/font/google';
+import { Ubuntu } from 'next/font/google';
 
-export const firaCode = Fira_Code({
-  weight: '400',
-  variable: '--font-fira-code',
-  subsets: ['latin'],
-});
-
-export const dmSans = DM_Sans({
-  weight: '400',
-  variable: '--font-dm-sans',
+export const ubuntu = Ubuntu({
+  weight: ['400', '700'],
+  variable: '--font-ubuntu',
   subsets: ['latin'],
 });

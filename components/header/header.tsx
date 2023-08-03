@@ -70,7 +70,7 @@ const NavbarList = () => (
   <>
     <li>
       <Link className={classes.link} href="/sponsors">
-        Patrocinadores
+        Sponsors
       </Link>
     </li>
     <li>

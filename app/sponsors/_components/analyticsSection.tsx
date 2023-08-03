@@ -57,7 +57,7 @@ export const AnalyticsSection = () => (
             <PiDiamondsFour size={24} />
           </span>
           <div>
-            <h3 className={classes.analyticCardTitle}>Mas de 50 asistentes a cada evento</h3>
+            <h3 className={classes.analyticCardTitle}>Mas de 70 asistentes a cada evento</h3>
           </div>
         </article>
       </div>

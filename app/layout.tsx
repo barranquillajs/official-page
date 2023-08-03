@@ -1,17 +1,17 @@
-import '@/styles/globals.css';
-import '@/styles/colors.css';
-
-import { dmSans, firaCode } from './fonts';
-import { returnMetadata } from '@/utils';
 import { Metadata } from 'next';
+
+import { returnMetadata } from '@/utils';
+import '@/styles/globals.css';
+
+import { ubuntu } from './fonts';
 
 export const metadata: Metadata = returnMetadata({});
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html className={`${firaCode.variable} ${dmSans.variable}`} lang="es">
+    <html className={`${ubuntu.variable}`} lang="es">
       <head />
-      <body>{children}</body>
+      <body className="overflow-x-hidden">{children}</body>
     </html>
   );
 };
