@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@apollo/client": "3.7.17",
-    "@makinox/makinox-ui": "1.6.8",
     "classnames": "2.3.2",
     "daisyui": "3.3.1",
     "graphql": "16.7.1",

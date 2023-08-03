@@ -1,4 +1,3 @@
-import { ClientStyleHelper } from '@/components';
 import '@/styles/globals.css';
 import '@/styles/colors.css';
 
@@ -12,10 +11,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html className={`${firaCode.variable} ${dmSans.variable}`} lang="es">
       <head />
-      <body>
-        <ClientStyleHelper />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 };

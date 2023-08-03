@@ -1,5 +1,5 @@
 import { getAllSponsors, getEvents, getOrganizers, getSpeakers } from '@/controllers';
-import { Hero, InfoSection, Meetups, Speakers, Sponsor, Staff } from '@/modules';
+import { Hero, InfoSection, Meetups, Speakers, Sponsor, Staff } from '@/app/_components';
 import { Footer, GradientBackground, Header } from '@/components';
 
 const Home = async () => {

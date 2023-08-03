@@ -318,13 +318,6 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@makinox/makinox-ui@1.6.8":
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/@makinox/makinox-ui/-/makinox-ui-1.6.8.tgz#898736e246926fe9608af2dad39f7504efed5c35"
-  integrity sha512-YUipJ15l3RSaHZc75/6oSne62H1NRX0yhAUMgMQu3onQPciz2llZXYBvFBLzZyML0x5deCtNDSjvNMlr9afNlA==
-  dependencies:
-    "@stitches/core" "1.2.8"
-
 "@next/env@13.4.10":
   version "13.4.10"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.4.10.tgz#8b17783d2c09be126bbde9ff1164566517131bff"
@@ -578,11 +571,6 @@
   version "1.2.0"
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
-
-"@stitches/core@1.2.8":
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/@stitches/core/-/core-1.2.8.tgz#dce3b8fdc764fbc6dbea30c83b73bfb52cf96173"
-  integrity sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==
 
 "@swc/helpers@0.5.1":
   version "0.5.1"
