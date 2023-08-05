@@ -26,6 +26,7 @@ export type EventType = {
   image?: {
     url?: string;
   };
+  date: string;
   imageBlurUrl: string;
   speakersId: Array<string>;
   eventLink: string;

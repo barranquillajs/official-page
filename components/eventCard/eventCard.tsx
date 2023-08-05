@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,11 +9,13 @@ const imageHeight = 120;
 const imageWidth = 205;
 
 export const EventCard = ({ event }: { event: EventUserComposedType }) => {
+  const date = format(new Date(event.date), 'MMMM dd, yyyy', { locale: es });
+
   return (
     <Link
       href={event.eventLink}
       target="_blank"
-      className="flex items-center py-3 px-4 bg-base-100 shadow-lg gap-4 rounded-md min-w-xl w-full cursor-pointer"
+      className="flex flex-col sm:flex-row items-center py-3 px-4 bg-base-100 shadow-lg gap-4 rounded-md min-w-xl w-full cursor-pointer"
       key={event.name}
     >
       <div className="relative flex rounded-md" style={{ width: imageWidth, height: imageHeight, minWidth: imageWidth }}>
@@ -29,9 +33,9 @@ export const EventCard = ({ event }: { event: EventUserComposedType }) => {
       </div>
 
       <div className="flex max-w-md flex-col justify-between h-max">
-        <h3 className="font-bold text-lg">{event.name}</h3>
+        <h3 className="font-bold text-lg mb-1">{event.name}</h3>
 
-        <p>
+        <p className="mb-4">
           {event.speakersInfo.map((speaker, idx) => {
             const totalSpeakers = event.speakersInfo?.length;
             if (idx + 1 === totalSpeakers) return <span key={speaker.id}>{speaker.name}</span>;
@@ -42,6 +46,7 @@ export const EventCard = ({ event }: { event: EventUserComposedType }) => {
             );
           })}
         </p>
+        <p className="capitalize font-medium text-base text-gray-400">{date}</p>
       </div>
     </Link>
   );
