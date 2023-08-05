@@ -15,7 +15,7 @@ const classes = {
 
 export const Staff = ({ organizers }: { organizers: Array<UserType> }) => {
   return (
-    <section className="container px-2 mx-auto pt-20" id="staff">
+    <section className="container px-4 md:px-0 mx-auto pt-20" id="staff">
       <div>
         <h2 className="text-3xl text-center">Organizadores</h2>
       </div>

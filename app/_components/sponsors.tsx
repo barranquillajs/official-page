@@ -7,7 +7,7 @@ const logoSize = 180;
 
 export const Sponsor = ({ sponsors }: { sponsors: Array<SponsorType> }) => {
   return (
-    <section className="container mx-auto pt-20">
+    <section className="container px-4 md:px-0 mx-auto pt-20">
       <div className="flex flex-col items-start justify-start md:flex-row md:justify-between md:items-center gap-2">
         <div className="flex items-center justify-start gap-2">
           <Icon className="text-emerald-500 mt-1" icon={IconCatalog.diamond} />
