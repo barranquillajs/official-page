@@ -13,7 +13,7 @@ const Sponsors = async () => {
     <section>
       <GradientBackground />
       <Header />
-      <div className="container mx-auto xl:px-48">
+      <div className="container px-2 mx-auto xl:px-48">
         <PrincipalSection />
         <PlanSection />
         <AnalyticsSection />

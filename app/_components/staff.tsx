@@ -15,11 +15,11 @@ const classes = {
 
 export const Staff = ({ organizers }: { organizers: Array<UserType> }) => {
   return (
-    <section className="container mx-auto pt-20" id="staff">
+    <section className="container px-2 mx-auto pt-20" id="staff">
       <div>
         <h2 className="text-3xl text-center">Organizadores</h2>
       </div>
-      <div className="flex justify-between flex-wrap mt-8">
+      <div className="flex justify-center sm:justify-between flex-wrap mt-8">
         {organizers.map((staff) => {
           return (
             <article key={staff.name} className="bg-primary-50 rounded-md m-4">
