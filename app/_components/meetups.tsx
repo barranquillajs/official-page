@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { EventUserComposedType } from '@/controllers';
+import { isUpcomingEvent } from '@/utils';
 import { EventCard } from '@/components';
 
 export const Meetups = ({ events }: { events: Array<EventUserComposedType> }) => {
@@ -14,9 +15,12 @@ export const Meetups = ({ events }: { events: Array<EventUserComposedType> }) =>
       </div>
 
       <div className="flex items-start justify-center lg:justify-between my-4 flex-wrap gap-4">
-        {events?.map((event) => (
-          <EventCard event={event} key={event.name} />
-        ))}
+        {events?.map((event) => {
+          const isUpcoming = isUpcomingEvent(event.date);
+
+          if (isUpcoming) return null;
+          return <EventCard event={event} key={event.name} />;
+        })}
       </div>
     </section>
   );

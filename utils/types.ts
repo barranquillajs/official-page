@@ -23,6 +23,7 @@ export type UserType = {
 
 export type EventType = {
   name: string;
+  place: string;
   image?: {
     url?: string;
   };
