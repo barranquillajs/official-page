@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import cn from 'classnames';
 
+import { Icon, IconCatalog } from '@/components';
 import { UserType } from '@/utils';
-import { FaLinkedin, FaHome, FaGithubSquare, FaUserAlt } from 'react-icons/fa';
+
+const imageSize = 130;
 
 const classes = {
-  imageContainer: cn('flex justify-center p-2'),
-  imageWrapper: cn('flex bg-primary-100 w-32 h-32 justify-center items-center rounded-full'),
+  imageContainer: cn('flex justify-center'),
+  imageWrapper: cn('flex bg-primary-100 justify-center items-center rounded-full bg-slate-100'),
   link: cn('p-2'),
   icons: 20,
 };
@@ -15,44 +17,44 @@ export const SpeakerCard = ({ speaker }: { speaker: UserType }) => {
   const hasPhoto = speaker?.image?.url !== undefined;
 
   return (
-    <article className="relative flex flex-col justify-center border-2 border-primary-100 w-40 min-h-40 rounded-md m-4" key={speaker.name}>
+    <article className="relative flex flex-col justify-center rounded-md m-4" key={speaker.name}>
       {hasPhoto ? (
         <div className={classes.imageContainer}>
-          <div className={classes.imageWrapper}>
+          <div className={classes.imageWrapper} style={{ width: imageSize, height: imageSize }}>
             <Image
               src={speaker.image.url}
               blurDataURL={speaker?.imageBlurUrl}
               alt={`Charlista ${speaker.name}`}
-              width={112}
-              height={112}
+              width={imageSize}
+              height={imageSize}
               className="rounded-full"
             />
           </div>
         </div>
       ) : (
         <div className={classes.imageContainer}>
-          <div className={classes.imageWrapper}>
-            <FaUserAlt size={40} />
+          <div className={classes.imageWrapper} style={{ width: imageSize, height: imageSize }}>
+            <Icon icon={IconCatalog.github} />
           </div>
         </div>
       )}
-      <div className="p-2 text-center truncate">
+      <div className="my-5 text-center truncate font-bold text-sm">
         <span>{speaker.name}</span>
       </div>
       <div className="flex justify-center h-10">
         {speaker?.homePage && (
           <a className={classes.link} href={speaker.homePage} target="_blank" rel="noreferrer" aria-label={`Pagina web de ${speaker.name}`}>
-            <FaHome size={classes.icons} />
+            <Icon width={22} height={22} icon={IconCatalog.home} />
           </a>
         )}
         {speaker?.githubLink && (
           <a className={classes.link} href={speaker.githubLink} target="_blank" rel="noreferrer" aria-label={`Github de ${speaker.name}`}>
-            <FaGithubSquare size={classes.icons} />
+            <Icon width={22} height={22} icon={IconCatalog.github} />
           </a>
         )}
         {speaker?.linkedinLink && (
           <a className={classes.link} href={speaker.linkedinLink} target="_blank" rel="noreferrer" aria-label={`Linkedin de ${speaker.name}`}>
-            <FaLinkedin size={classes.icons} />
+            <Icon width={22} height={22} icon={IconCatalog.linkedin} />
           </a>
         )}
       </div>

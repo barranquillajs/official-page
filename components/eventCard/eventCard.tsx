@@ -1,39 +1,65 @@
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Card } from '@makinox/makinox-ui';
-
 import { EventUserComposedType } from '@/controllers';
 
+const imageHeight = 120;
+const imageWidth = 205;
+
 export const EventCard = ({ event }: { event: EventUserComposedType }) => {
+  const date = format(new Date(event.date), 'MMMM dd, yyyy', { locale: es });
+
   return (
-    <Link href={event.eventLink} target="_blank" className={`relative m-2 cursor-pointer ${Card({ type: 'elevated' })}`} key={event.name}>
-      <div className="card-media w-96 h-56">
+    <Link
+      href={event.eventLink}
+      target="_blank"
+      className="flex flex-col sm:flex-row items-center py-3 px-4 bg-base-100 shadow-lg gap-4 rounded-md min-w-xl w-full cursor-pointer"
+      key={event.name}
+    >
+      <div className="relative rounded-md flex sm:hidden w-full" style={{ height: imageHeight }}>
         <Image
-          className="object-cover"
+          className="object-cover rounded-md w-full"
           src={event.image.url}
-          fill
+          width={imageWidth}
+          height={imageHeight}
           priority={false}
           quality={50}
           placeholder="blur"
           blurDataURL={event.imageBlurUrl}
-          sizes="(min-width: 66em) 33vw,
-      (min-width: 44em) 50vw,
-      100vw"
           alt={`BarranqullaJS Meetup: ${event.name} `}
         />
       </div>
-      <div className="card-header">
-        <h3 className="headline6">{event.name}</h3>
+      <div className="relative rounded-md hidden sm:flex" style={{ width: imageWidth, height: imageHeight, minWidth: imageWidth }}>
+        <Image
+          className="object-cover rounded-md"
+          src={event.image.url}
+          width={imageWidth}
+          height={imageHeight}
+          priority={false}
+          quality={50}
+          placeholder="blur"
+          blurDataURL={event.imageBlurUrl}
+          alt={`BarranqullaJS Meetup: ${event.name} `}
+        />
       </div>
-      <div className="card-body">
-        <p className="body2">
+
+      <div className="flex max-w-md flex-col justify-between h-max">
+        <h3 className="font-bold text-lg mb-1">{event.name}</h3>
+
+        <p className="mb-4">
           {event.speakersInfo.map((speaker, idx) => {
             const totalSpeakers = event.speakersInfo?.length;
             if (idx + 1 === totalSpeakers) return <span key={speaker.id}>{speaker.name}</span>;
-            return <span key={speaker.id}>{speaker.name} - </span>;
+            return (
+              <span key={speaker.id} className="font-normal text-base">
+                {speaker.name} -{' '}
+              </span>
+            );
           })}
         </p>
+        <p className="capitalize font-medium text-base text-gray-400">{date}</p>
       </div>
     </Link>
   );

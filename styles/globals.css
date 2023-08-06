@@ -15,13 +15,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Fira Code', var(--font-fira-code), 'DM Sans',var(--font-dm-sans), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+  font-family: 'Ubuntu', var(--font-ubuntu), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
 }
 body {
   padding: 0;
   margin: 0;
-  font-family: 'DM Sans',var(--font-dm-sans), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+  font-family: 'Ubuntu', var(--font-ubuntu), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
 }
 
@@ -30,8 +30,6 @@ a {
   text-decoration: none;
 }
 
-/* Helpers  */
-.container {
-  max-width: 1400px;
-  width: 100%;
+.btn {
+  @apply rounded-2xl;
 }

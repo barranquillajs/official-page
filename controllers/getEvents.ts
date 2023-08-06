@@ -13,6 +13,7 @@ const GetEventsQuery = gql`
         image {
           url
         }
+        date
         imageBlurUrl
         speakersId
         eventLink

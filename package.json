@@ -10,16 +10,16 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@apollo/client": "3.7.15",
-    "@makinox/makinox-ui": "1.6.8",
+    "@apollo/client": "3.7.17",
     "classnames": "2.3.2",
-    "graphql": "^16.6.0",
-    "next": "13.4.4",
+    "daisyui": "3.3.1",
+    "graphql": "16.7.1",
+    "next": "13.4.10",
     "npm": "^8.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "4.6.0",
-    "sharp": "0.32.1"
+    "date-fns": "2.30.0",
+    "sharp": "0.32.3"
   },
   "devDependencies": {
     "@commitlint/cli": "17.1.2",

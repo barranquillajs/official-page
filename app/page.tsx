@@ -1,6 +1,6 @@
 import { getAllSponsors, getEvents, getOrganizers, getSpeakers } from '@/controllers';
-import { Hero, InfoSection, Meetups, Speakers, Sponsor, Staff } from '@/modules';
-import { Footer, Header } from '@/components';
+import { Hero, InfoSection, Meetups, Speakers, Sponsor, Staff } from '@/app/_components';
+import { Footer, GradientBackground, Header } from '@/components';
 
 const Home = async () => {
   const sponsorsData = getAllSponsors();
@@ -12,11 +12,14 @@ const Home = async () => {
 
   return (
     <section>
+      <GradientBackground />
       <Header />
       <Hero />
-      <InfoSection />
-      <Meetups events={events} />
       <Sponsor sponsors={sponsors} />
+      <div className="container px-4 md:px-0 mx-auto flex flex-col lg:flex-row lg:items-center mt-20 gap-8">
+        <Meetups events={events} />
+        <InfoSection />
+      </div>
       <Staff organizers={organizers} />
       <Speakers speakers={speakers} />
       <Footer />

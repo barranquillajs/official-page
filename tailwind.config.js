@@ -1,18 +1,11 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const daisyPlugin = require('daisyui');
+const daisyThemes = require('daisyui/src/theming/themes');
+
 /** @type {import('tailwindcss').Config} */
 
 const colors = {
-  primary: {
-    50: '#fdfde9',
-    100: '#fafbc6',
-    200: '#f9f68f',
-    300: '#f5e94f',
-    400: '#efd81b',
-    500: '#dfc113',
-    600: '#c1980d',
-    700: '#9a6e0e',
-    800: '#7f5714',
-    900: '#6d4716',
-  },
+  primary: '#F2D903',
   secondary: {
     50: '#f2f7fd',
     100: '#e5edf9',
@@ -38,9 +31,26 @@ module.exports = {
       colors,
     },
     fontFamily: {
-      display: ['Fira Code'],
-      body: ['DM Sans'],
+      display: ['Ubuntu'],
     },
   },
-  plugins: [],
+  plugins: [daisyPlugin],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...daisyThemes['[data-theme=light]'],
+          primary: '#F2D903',
+          'primary-focus': '#E5CE06',
+          'primary-content': '#003320',
+        },
+        dark: {
+          ...daisyThemes['[data-theme=dark]'],
+          primary: '#F2D903',
+          'primary-focus': '#E5CE06',
+          'primary-content': '#003320',
+        },
+      },
+    ],
+  },
 };
