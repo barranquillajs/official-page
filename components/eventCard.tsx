@@ -59,7 +59,7 @@ export const EventCard = ({ event }: { event: EventUserComposedType }) => {
             );
           })}
         </p>
-        <p className="capitalize font-medium text-base text-gray-400">{date}</p>
+        <p className="capitalize font-medium text-base text-gray-500">{date}</p>
       </div>
     </Link>
   );

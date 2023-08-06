@@ -74,12 +74,12 @@ const NavbarList = () => (
       </Link>
     </li>
     <li>
-      <Link className={classes.link} href="/#staff">
+      <Link className={classes.link} href={{ pathname: '/', hash: 'staff' }}>
         Organizadores
       </Link>
     </li>
     <li>
-      <Link className={classes.link} href="/#heroes">
+      <Link className={classes.link} href={{ pathname: '/', hash: 'heroes' }}>
         Héroes
       </Link>
     </li>
