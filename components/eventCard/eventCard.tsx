@@ -18,7 +18,20 @@ export const EventCard = ({ event }: { event: EventUserComposedType }) => {
       className="flex flex-col sm:flex-row items-center py-3 px-4 bg-base-100 shadow-lg gap-4 rounded-md min-w-xl w-full cursor-pointer"
       key={event.name}
     >
-      <div className="relative flex rounded-md" style={{ width: imageWidth, height: imageHeight, minWidth: imageWidth }}>
+      <div className="relative rounded-md flex sm:hidden w-full" style={{ height: imageHeight }}>
+        <Image
+          className="object-cover rounded-md w-full"
+          src={event.image.url}
+          width={imageWidth}
+          height={imageHeight}
+          priority={false}
+          quality={50}
+          placeholder="blur"
+          blurDataURL={event.imageBlurUrl}
+          alt={`BarranqullaJS Meetup: ${event.name} `}
+        />
+      </div>
+      <div className="relative rounded-md hidden sm:flex" style={{ width: imageWidth, height: imageHeight, minWidth: imageWidth }}>
         <Image
           className="object-cover rounded-md"
           src={event.image.url}

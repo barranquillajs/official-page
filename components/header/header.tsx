@@ -16,12 +16,12 @@ export const Header = () => {
   const [isAtTop, setIsAtTop] = useState(true);
 
   const renderClasses = {
-    container: cn('top-0 z-10 md:sticky', {
+    container: cn('top-0 z-10 sticky', {
       'bg-base-100/70 backdrop-blur-md': !isAtTop,
     }),
-    headerImage: cn('rounded-md h-28', {
+    headerImage: cn('rounded-md', {
       'h-28 w-28': isAtTop,
-      'h-30': !isAtTop,
+      'h-10 w-28': !isAtTop,
     }),
   };
 
