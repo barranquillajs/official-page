@@ -1,4 +1,5 @@
-import { LINK_BARRANQUILLA_MEETUP } from '@/constants';
+import Link from 'next/link';
+
 import { EventUserComposedType } from '@/controllers';
 import { EventCard } from '@/components';
 
@@ -8,9 +9,7 @@ export const Meetups = ({ events }: { events: Array<EventUserComposedType> }) =>
       <div className="mb-2  w-full flex items-center justify-between">
         <h2 className="text-3xl">Ultimos eventos</h2>
         <button className="btn btn-primary">
-          <a href={LINK_BARRANQUILLA_MEETUP} target="_blank" rel="noreferrer">
-            Ver más
-          </a>
+          <Link href="/events">Ver más</Link>
         </button>
       </div>
 

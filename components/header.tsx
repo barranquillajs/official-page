@@ -69,6 +69,11 @@ export const Header = () => {
 const NavbarList = () => (
   <>
     <li>
+      <Link className={classes.link} href="/events">
+        Eventos
+      </Link>
+    </li>
+    <li>
       <Link className={classes.link} href="/sponsors">
         Sponsors
       </Link>
