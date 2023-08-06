@@ -27,10 +27,16 @@ export const Hero = () => {
           <p className="font-normal text-base md:leading-10 md:text-2xl my-6">
             Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa
           </p>
-          <button className="btn btn-primary flex-nowrap">
+          <a
+            className="btn btn-primary flex-nowrap"
+            href={LINK_BARRANQUILLA_DISCORD}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link hacia discord"
+          >
             <span>Unirme a la comunidad</span>
             <Icon className="mt-1" width={20} height={20} icon={IconCatalog.right} />
-          </button>
+          </a>
           <div>
             <h2 className="text-xl mt-8 mb-4">Síguenos en nuestras redes</h2>
             <div className="flex justify-start gap-8 flex-wrap">
