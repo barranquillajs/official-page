@@ -17,7 +17,7 @@ const events = [
   },
   {
     title: 'Eventos en vivo',
-    text: 'Cada evento que hacemos es trasmitido en vivo en twitch con iteraccion del publico. Estos eventos estan disponibles dias despues en youtube.',
+    text: 'Cada evento que hacemos es transmitido en vivo en Twitch con interacción del público. Estos eventos están disponibles días después en YouTube.',
   },
 ];
 
