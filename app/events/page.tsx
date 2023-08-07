@@ -13,7 +13,7 @@ const Sponsors = async () => {
       <GradientBackground className="max-h-[800px]" />
       <Header />
       <div className="container px-4 md:px-0 mx-auto">
-        <h1 className="text-[90px] leading-[97px] font-bold my-16">Nuestros Eventos</h1>
+        <h1 className="text-5xl sm:text-[90px] sm:leading-[97px] font-bold my-16">Nuestros Eventos</h1>
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {events.map((event) => (
             <EventCard key={event.name} event={event} />

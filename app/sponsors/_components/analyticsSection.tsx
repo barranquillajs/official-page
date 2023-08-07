@@ -4,7 +4,7 @@ import cn from 'classnames';
 const classes = {
   yellowIcon: cn('bg-primary text-stone-900 p-3 rounded-2xl'),
   analyticTitle: cn('text-3xl font-medium mt-20 mb-8 text-center lg:text-left'),
-  analyticDivider: cn('grid grid-cols-2 items-center lg:items-start gap-8'),
+  analyticDivider: cn('grid grid-cols-1 lg:grid-cols-2 items-center lg:items-start gap-8'),
   analyticCard: cn('flex gap-4 items-start py-5 px-2 md:px-10 bg-base-100 rounded-md shadow-xl w-full h-full'),
   analyticCardTitle: cn('text-xl font-bold mb-1'),
   analyticCardText: cn('text-base font-normal'),
@@ -25,6 +25,8 @@ const analytics = [
   'Reuniones mensuales',
   'Más de 70 asistentes presenciales a cada evento',
   'Más de 200 asistentes online en cada evento',
+  'Más de 900 miembros en la comunidad',
+  'Evento de 5 estrellas calificados por la comunidad',
   'Invitados expertos',
 ];
 
