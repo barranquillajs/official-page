@@ -1,6 +1,9 @@
 import { getAllSponsors, getEvents, getOrganizers, getSpeakers } from '@/controllers';
-import { Hero, InfoSection, Meetups, Speakers, Sponsor, Staff, Upcoming } from '@/app/_components';
 import { Footer, GradientBackground, Header } from '@/components';
+
+import { Hero, InfoSection, Meetups, Speakers, Sponsor, Staff, Upcoming } from '@/app/_components';
+
+export const revalidate = 86400; // 24 hours
 
 const Home = async () => {
   const sponsorsData = getAllSponsors();
