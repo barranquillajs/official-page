@@ -1,0 +1,29 @@
+---
+import GradientBackground from '../components/gradientBackground.astro';
+import Footer from '../components/footer.astro';
+import Layout from '../layouts/Layout.astro';
+
+import { EventCard } from '../components/eventCard';
+import { Header } from '../components/header';
+import { getEvents } from '../controllers';
+
+const eventsData = getEvents(40);
+const [events] = await Promise.all([eventsData]);
+---
+
+<Layout title="Haz parte de nuestros eventos - Barranquilla JS">
+  <section>
+    <GradientBackground className="max-h-[200px]" />
+    <Header client:load />
+    <div class="container px-4 md:px-0 mx-auto">
+      <h1 class="text-5xl sm:text-[90px] sm:leading-[97px] font-bold my-16">Nuestros Eventos</h1>
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        {events.map((event) => <EventCard event={event} />)}
+      </section>
+    </div>
+
+    <Footer />
+  </section>
+
+  <Layout />
+</Layout>

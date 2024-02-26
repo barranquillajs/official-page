@@ -1,0 +1,33 @@
+---
+import { Icon, IconCatalog } from '../components/icon';
+import { pricingData } from '../constants';
+
+const currentPlan = pricingData[0];
+---
+
+<section class="flex flex-col items-center">
+  <h2 class="text-4xl font-bold mb-9 mt-16">Bienvenid@ a nuestra comunidad</h2>
+  <div class="py-5 px-7 bg-base-100 rounded-3xl shadow-xl w-fit">
+    <div class="flex items-center gap-3 border-b border-b-gray-200 pb-5 mb-5">
+      <span class="bg-emerald-500 text-white p-3 rounded-lg">
+        <Icon viewBox="0 0 24 24" width={24} height={24} icon={IconCatalog.diamond} />
+      </span>
+      <div>
+        <h3 class="font-bold text-xl">Sponsorships</h3>
+        <span class="text-sm text-gray-500 font-normal">{currentPlan.price}</span>
+      </div>
+    </div>
+
+    <ul>
+      {
+        currentPlan.perks.map((perk) => (
+          <li class="flex items-center mb-5 gap-2">
+            <Icon viewBox="0 0 18 18" width={18} height={18} icon={IconCatalog.check} />
+            <p>{perk}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <a href="mailto:barranquillajsx@gmail.com" class="btn btn-primary w-full"> Contáctanos</a>
+  </div>
+</section>

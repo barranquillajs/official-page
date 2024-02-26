@@ -1,0 +1,60 @@
+---
+import cn from 'classnames';
+import { Image } from 'astro:assets';
+
+import { Icon, IconCatalog } from '../components/icon';
+import heroImage from '../assets/hero-image.png';
+
+import {
+  LINK_BARRANQUILLA_DISCORD,
+  LINK_BARRANQUILLA_TWITCH,
+  LINK_BARRANQUILLA_TWITTER,
+  LINK_BARRANQUILLA_LINKEDIN,
+  LINK_BARRANQUILLA_INSTAGRAM,
+  LINK_BARRANQUILLA_YOUTUBE,
+  LINK_BARRANQUILLA_WHATSAPP,
+} from '../constants';
+
+const classes = {
+  item: cn('text-primary-500 text-2xl'),
+};
+---
+
+<article class="flex items-center lg:items-end justify-between lg:flex-row flex-col-reverse container px-4 md:px-0 mx-auto lg:my-20">
+  <div class="max-w-2xl lg:max-w-2xl w-full">
+    <h1 class="text-5xl md:text-[90px] font-bold md:leading-[97px] text-center lg:text-left">¿Te apasiona Javascript?</h1>
+    <p class="font-normal text-base md:leading-10 md:text-2xl my-6">
+      Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa
+    </p>
+    <a class="btn btn-primary flex-nowrap" href={LINK_BARRANQUILLA_WHATSAPP} target="_blank" rel="noreferrer" aria-label="Link hacia discord">
+      <span>Unirme a la comunidad</span>
+      <Icon className="mt-1" width={20} height={20} icon={IconCatalog.right} />
+    </a>
+    <div>
+      <h2 class="text-xl mt-8 mb-4">Síguenos en nuestras redes</h2>
+      <div class="flex justify-start gap-8 flex-wrap">
+        <a class={classes.item} href={LINK_BARRANQUILLA_DISCORD} target="_blank" rel="noreferrer" aria-label="Link hacia discord">
+          <Icon icon={IconCatalog.discord} />
+        </a>
+        <a class={classes.item} href={LINK_BARRANQUILLA_TWITCH} target="_blank" rel="noreferrer" aria-label="Link hacia twitch">
+          <Icon icon={IconCatalog.twitch} />
+        </a>
+        <a class={classes.item} href={LINK_BARRANQUILLA_TWITTER} target="_blank" rel="noreferrer" aria-label="Link hacia twitter">
+          <Icon icon={IconCatalog.twitter} />
+        </a>
+        <a class={classes.item} href={LINK_BARRANQUILLA_LINKEDIN} target="_blank" rel="noreferrer" aria-label="Link hacia linkedin">
+          <Icon icon={IconCatalog.linkedin} />
+        </a>
+        <a class={classes.item} href={LINK_BARRANQUILLA_INSTAGRAM} target="_blank" rel="noreferrer" aria-label="Link hacia instagram">
+          <Icon icon={IconCatalog.instagram} />
+        </a>
+        <a class={classes.item} href={LINK_BARRANQUILLA_YOUTUBE} target="_blank" rel="noreferrer" aria-label="Link hacia youtube">
+          <Icon icon={IconCatalog.youtube} />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <Image width={800} height={420} class="rounded-full" src={heroImage} alt="Asistentes del meetup de barranquilla JS" />
+  </div>
+</article>

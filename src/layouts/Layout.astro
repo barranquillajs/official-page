@@ -1,0 +1,47 @@
+---
+import '@fontsource/ubuntu/400.css';
+import '@fontsource/ubuntu/500.css';
+import '@fontsource/ubuntu/700.css';
+
+import { SEOMetadata } from 'astro-seo-metadata';
+
+import favicon from '../assets/favicon.ico';
+import defaultImage from '../assets/BAQJS.png';
+import '../styles/globals.css';
+
+const siteName = 'Barranquilla JS';
+const author = 'Jesús Bossa';
+const type = 'website';
+
+const title = Astro.props.title || 'Barranquilla JS - Pagina Oficial';
+const description =
+  Astro.props.description || 'Este es un grupo para todos los desarrolladores, entusiastas y apasionados por Javascript en Barranquilla y la costa.';
+const keywords =
+  Astro.props.keywords || 'barranquilla, js, javascript, meetup, comunidad, desarrollo, programacion, tecnologia, costa, atlantico, colombia';
+const image = Astro.props.image || defaultImage.src;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content={keywords} />
+    <SEOMetadata
+      siteName={siteName}
+      title={title}
+      description={description}
+      image={image}
+      favicon={favicon}
+      author={author}
+      copyright="MIT"
+      astroSitemap={true}
+      canonicalUrl={Astro.url.toString()}
+      type={type}
+      astroGenerator={true}
+    />
+  </head>
+  <body class="overflow-x-hidden">
+    <slot />
+  </body>
+</html>

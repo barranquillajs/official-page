@@ -1,0 +1,85 @@
+---
+import { es } from 'date-fns/locale';
+import { Image } from 'astro:assets';
+import { format } from 'date-fns';
+import cn from 'classnames';
+
+import { Icon, IconCatalog } from '../components/icon';
+import { DEFAULT_PHOTO_URL } from '../constants';
+import { type EventType } from '../utils/types';
+import { isUpcomingEvent } from '../utils';
+
+const imageHeight = 250;
+const imageWidth = 372;
+
+const classes = {
+  cardInfo: cn('flex items-start gap-2'),
+  cardInfoTitle: cn('text-xl font-bold'),
+  yellowIcon: cn('bg-primary text-stone-900 p-3 rounded-2xl'),
+  cardInfoText: cn('text-gray-500 font-medium text-xl capitalize'),
+};
+
+const events = Astro.props.events as Array<EventType>;
+
+const event = events.find((event) => isUpcomingEvent(event.date));
+const date = event?.date ? format(new Date(event.date), 'MMMM dd, yyyy', { locale: es }) : undefined;
+---
+
+{
+  date ? (
+    <section class="pt-20 container px-4 md:px-0 mx-auto">
+      <article class="bg-base-100 shadow-lg rounded-lg">
+        <div class="flex justify-start">
+          <div class="bg-neutral-900 text-white flex justify-between items-center py-1 px-5 rounded-lg rounded-bl-none mb-4 gap-4">
+            <Icon icon={IconCatalog.alarm} viewBox="0 0 20 20" width={20} height={20} />
+            <span class="font-bold text-lg">Nuevo Evento</span>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-2">
+          <div class="relative rounded-md flex md:hidden w-full" style={{ height: imageHeight }}>
+            <Image
+              class="object-cover rounded-md w-full"
+              src={event?.image?.url || DEFAULT_PHOTO_URL}
+              width={imageWidth}
+              height={imageHeight}
+              alt={`BarranqullaJS Meetup: ${event?.name} `}
+            />
+          </div>
+          <div class="relative rounded-md p-3 hidden md:flex" style={{ width: imageWidth, height: imageHeight, minWidth: imageWidth }}>
+            <Image
+              class="object-cover rounded-md"
+              src={event?.image?.url || DEFAULT_PHOTO_URL}
+              width={imageWidth}
+              height={imageHeight}
+              alt={`BarranqullaJS Meetup: ${event?.name} `}
+            />
+          </div>
+          <div class="gap-5 flex flex-col items-start p-4">
+            <h3 class="text-3xl font-bold">{event?.name}</h3>
+            <div class={classes.cardInfo}>
+              <span class={classes.yellowIcon}>
+                <Icon icon={IconCatalog.clock} viewBox="0 0 32 32" width={32} height={32} />
+              </span>
+              <div>
+                <h4 class={classes.cardInfoTitle}>Fecha</h4>
+                <span class={classes.cardInfoText}>{date}</span>
+              </div>
+            </div>
+            <div class={classes.cardInfo}>
+              <span class={classes.yellowIcon}>
+                <Icon icon={IconCatalog.place} viewBox="0 0 32 32" width={32} height={32} />
+              </span>
+              <div>
+                <h4 class={classes.cardInfoTitle}>Ubicación</h4>
+                <span class={classes.cardInfoText}>{event?.place}</span>
+              </div>
+            </div>
+            <a class="btn btn-primary mb-4" href={event?.eventLink} target="_blank" rel="noreferrer">
+              Quiero asistir
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+  ) : null
+}

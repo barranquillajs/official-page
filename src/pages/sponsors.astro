@@ -1,0 +1,30 @@
+---
+import GradientBackground from '../components/gradientBackground.astro';
+import PrincipalSection from '../layouts/PrincipalSectionLayout.astro';
+import AnalyticsSection from '../layouts/AnalyticsSectionLayout.astro';
+import SponsorSection from '../layouts/SponsorSectionLayout.astro';
+import PlanSection from '../layouts/PlanSectionLayout.astro';
+import Footer from '../components/footer.astro';
+import Layout from '../layouts/Layout.astro';
+
+import { getAllSponsors } from '../controllers';
+import { Header } from '../components/header';
+
+const sponsorsData = getAllSponsors();
+const [sponsors] = await Promise.all([sponsorsData]);
+---
+
+<Layout title="Haz parte de nuestros sponsors - Barranquilla JS">
+  <section>
+    <GradientBackground />
+    <Header client:load />
+    <div class="container px-4 md:px-0 mx-auto xl:px-48">
+      <PrincipalSection />
+      <PlanSection />
+      <AnalyticsSection />
+      <SponsorSection sponsors={sponsors} />
+    </div>
+
+    <Footer />
+  </section>
+</Layout>

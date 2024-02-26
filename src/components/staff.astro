@@ -1,0 +1,72 @@
+---
+import cn from 'classnames';
+import { Image } from 'astro:assets';
+
+import { SpeakerPlaceHolder } from './speakerPlaceHolder';
+import { Icon, IconCatalog } from '../components/icon';
+import { type UserType } from '../utils';
+
+const imageSize = 193;
+
+const classes = {
+  imageContainer: cn('flex justify-center p-2 rounded-full border-2 border-neutral-700'),
+  imageWrapper: cn('flex bg-base-white justify-center items-center rounded-full'),
+  link: cn('p-2'),
+  icons: 20,
+};
+const organizers = Astro.props.organizers as Array<UserType>;
+---
+
+<section class="container px-4 md:px-0 mx-auto pt-20" id="staff">
+  <div>
+    <h2 class="text-3xl text-center">Organizadores</h2>
+  </div>
+  <div class="flex justify-center sm:justify-between flex-wrap mt-8">
+    {
+      organizers.map((staff) => {
+        const staffImageUrl = staff?.image?.url;
+
+        return (
+          <article class="bg-primary-50 rounded-md m-4">
+            <div class={classes.imageContainer}>
+              <div class={classes.imageWrapper} style={{ width: imageSize, height: imageSize }}>
+                {staffImageUrl ? (
+                  <Image
+                    src={staffImageUrl}
+                    alt={`Organizador de la comunidad: ${staff.name}`}
+                    width={imageSize}
+                    height={imageSize}
+                    class="rounded-full"
+                  />
+                ) : (
+                  <SpeakerPlaceHolder imageSize={imageSize} />
+                )}
+              </div>
+            </div>
+
+            <div class="text-center font-bold text-lg my-4">
+              <span>{staff.name}</span>
+            </div>
+            <div class="flex justify-center h-10">
+              {staff?.homePage && (
+                <a class={classes.link} href={staff.homePage} target="_blank" rel="noreferrer" aria-label="Website">
+                  <Icon icon={IconCatalog.home} />
+                </a>
+              )}
+              {staff?.githubLink && (
+                <a class={classes.link} href={staff.githubLink} target="_blank" rel="noreferrer" aria-label="Github">
+                  <Icon icon={IconCatalog.github} />
+                </a>
+              )}
+              {staff?.linkedinLink && (
+                <a class={classes.link} href={staff.linkedinLink} target="_blank" rel="noreferrer" aria-label="Linkedin">
+                  <Icon icon={IconCatalog.linkedin} />
+                </a>
+              )}
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+</section>

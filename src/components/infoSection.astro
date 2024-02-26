@@ -1,0 +1,22 @@
+---
+import cn from 'classnames';
+
+const classes = {
+  parragraph: cn('text-xl font-normal mb-4 text-center lg:text-left'),
+  title: cn('text-4xl font-bold mb-4 text-center lg:text-left'),
+  item: cn('flex flex-col items-center lg:items-start'),
+};
+---
+
+<section class="flex flex-col justify-center items-center w-full m-auto md:max-w-lg lg:w-1/2 gap-8">
+  <article class={cn(classes.item, 'border-b-2 pb-10 pt-10 lg:pt-0')}>
+    <h2 class={classes.title}>Haz parte de nuestros sponsors</h2>
+    <p class={classes.parragraph}>Apoyanos, crezcamos juntos, mejoremos este comunidad entre todos.</p>
+    <a href="/sponsors" class="btn btn-primary"> Nuestros planes para sponsors.</a>
+  </article>
+  <article class={classes.item}>
+    <h2 class={classes.title}>Queremos escuchar sobre ti</h2>
+    <p class={classes.parragraph}>Siempre estamos buscando charlistas, si quieres postular una charla, haz click en el botón</p>
+    <a href="https://github.com/barranquillajs/Meetups/issues" target="_blank" rel="noreferrer" class="btn btn-primary"> Postular charla</a>
+  </article>
+</section>

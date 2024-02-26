@@ -1,0 +1,38 @@
+---
+import GradientBackground from '../components/gradientBackground.astro';
+import InfoSection from '../components/infoSection.astro';
+import Upcoming from '../components/upcoming.astro';
+import Sponsor from 'src/components/sponsors.astro';
+import Meetups from 'src/components/meetups.astro';
+import Footer from '../components/footer.astro';
+import Staff from 'src/components/staff.astro';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/hero.astro';
+
+import { getAllSponsors, getEvents, getOrganizers, getSpeakers } from '../controllers';
+
+import { Header } from 'src/components/header';
+import { Speakers } from 'src/components/speakers';
+
+const organizers = await getOrganizers();
+const sponsors = await getAllSponsors();
+const speakers = await getSpeakers();
+const events = await getEvents(4);
+---
+
+<Layout title="Barranquilla JS - Pagina Oficial">
+  <section>
+    <GradientBackground />
+    <Header client:load />
+    <Hero />
+    <Sponsor sponsors={sponsors} />
+    <Upcoming events={events} />
+    <div class="container px-4 md:px-0 mx-auto flex flex-col lg:flex-row lg:items-center mt-20 gap-8">
+      <Meetups events={events} />
+      <InfoSection />
+    </div>
+    <Staff organizers={organizers} />
+    <Speakers client:load speakers={speakers} />
+    <Footer />
+  </section>
+</Layout>

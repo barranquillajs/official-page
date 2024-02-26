@@ -1,0 +1,21 @@
+---
+import { type SponsorType } from '../utils';
+import { Image } from 'astro:assets';
+
+const logoSize = 180;
+
+const sponsors = Astro.props.sponsors as Array<SponsorType>;
+---
+
+<section>
+  <h2 class="text-3xl font-medium mt-20 mb-8 text-center lg:text-left">Sponsors que han confiado en nosotros</h2>
+  <div class="flex flex-wrap gap-10 justify-center">
+    {
+      sponsors.map((sponsor) => (
+        <article class="flex justify-center pt-2 items-center rounded-full" style={{ width: logoSize, height: logoSize }}>
+          <Image width={logoSize} height={logoSize} class="rounded-full" src={sponsor.logo.url} alt="Asistentes del meetup de barranquilla JS" />
+        </article>
+      ))
+    }
+  </div>
+</section>

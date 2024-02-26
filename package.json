@@ -1,40 +1,35 @@
 {
-  "name": "official-page",
-  "version": "0.1.0",
-  "private": true,
+  "name": "magical-magnitude",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "lint": "astro check",
+    "astro": "astro"
   },
   "dependencies": {
-    "@apollo/client": "3.7.17",
-    "classnames": "2.3.2",
-    "daisyui": "3.3.1",
-    "graphql": "16.7.1",
-    "next": "13.4.19",
-    "npm": "^8.19.2",
+    "@apollo/client": "3.9.4",
+    "@astrojs/check": "0.5.4",
+    "@astrojs/react": "3.0.10",
+    "@astrojs/tailwind": "5.1.0",
+    "@fontsource/ubuntu": "5.0.8",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.19",
+    "astro": "4.3.7",
+    "astro-seo-metadata": "^0.6.0",
+    "classnames": "2.5.1",
+    "daisyui": "4.7.2",
+    "date-fns": "3.3.1",
+    "graphql": "16.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "date-fns": "2.30.0",
-    "sharp": "0.32.3"
+    "tailwindcss": "3.4.1",
+    "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-conventional": "17.1.0",
-    "@types/react": "18.0.24",
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
-    "autoprefixer": "^10.4.13",
-    "eslint": "8.26.0",
-    "eslint-config-next": "13.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "husky": "8.0.1",
-    "postcss": "^8.4.18",
-    "prettier": "^2.7.1",
-    "tailwindcss": "^3.2.1",
-    "typescript": "4.8.4"
+    "@types/node": "20.11.17"
   }
 }

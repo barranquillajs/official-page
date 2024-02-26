@@ -1,0 +1,29 @@
+---
+import { type EventUserComposedType } from '../controllers';
+import { EventCard } from '../components/eventCard';
+import { isUpcomingEvent } from '../utils';
+
+const events = Astro.props.events as Array<EventUserComposedType>;
+const pastEvents = events?.filter((event) => !isUpcomingEvent(event.date));
+const filterEvents = pastEvents?.length > 3 ? pastEvents?.slice(0, 3) : pastEvents;
+---
+
+<section class="flex flex-col justify-center w-full lg:w-1/2">
+  <div class="mb-2 w-full flex items-center justify-between">
+    <h2 class="text-3xl">Ultimos eventos</h2>
+    <button class="btn btn-primary">
+      <a href="/events">Ver más</a>
+    </button>
+  </div>
+
+  <div class="flex items-start justify-center lg:justify-between my-4 flex-wrap gap-4">
+    {
+      filterEvents?.map((event) => {
+        const isUpcoming = isUpcomingEvent(event.date);
+
+        if (isUpcoming) return null;
+        return <EventCard event={event} />;
+      })
+    }
+  </div>
+</section>
