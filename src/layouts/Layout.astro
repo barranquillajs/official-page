@@ -7,6 +7,8 @@ import { SEOMetadata } from 'astro-seo-metadata';
 
 import favicon from '../assets/favicon.ico';
 import defaultImage from '../assets/BAQJS.png';
+import { DOMAIN } from '../constants';
+
 import '../styles/globals.css';
 
 const siteName = 'Barranquilla JS';
@@ -19,6 +21,10 @@ const description =
 const keywords =
   Astro.props.keywords || 'barranquilla, js, javascript, meetup, comunidad, desarrollo, programacion, tecnologia, costa, atlantico, colombia';
 const image = Astro.props.image || defaultImage.src;
+
+const pathname = Astro.url.pathname;
+
+const site = `${DOMAIN}${pathname}`
 ---
 
 <!doctype html>
@@ -36,7 +42,7 @@ const image = Astro.props.image || defaultImage.src;
       author={author}
       copyright="MIT"
       astroSitemap={true}
-      canonicalUrl="https://barranquillajs.org"
+      canonicalUrl={site}
       type={type}
       astroGenerator={true}
     />
