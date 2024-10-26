@@ -12,6 +12,8 @@ import {
   LINK_BARRANQUILLA_TWITTER,
   LINK_BARRANQUILLA_DISCORD,
   LINK_BARRANQUILLA_YOUTUBE,
+  LINK_BARRANQUILLA_GITHUB,
+  LINK_BARRANQUILLA_WHATSAPP,
 } from '../constants';
 
 const classes = {
@@ -41,7 +43,13 @@ const classes = {
       <a class={classes.item} href={LINK_BARRANQUILLA_YOUTUBE} target="_blank" rel="noreferrer" aria-label="Link hacia youtube">
         <Icon icon={IconCatalog.youtube} />
       </a>
+      <a class={classes.item} href={LINK_BARRANQUILLA_GITHUB} target="_blank" rel="noreferrer" aria-label="Link hacia GitHub">
+        <Icon icon={IconCatalog.github} />
+      </a>
+      <a class={classes.item} href={LINK_BARRANQUILLA_WHATSAPP} target="_blank" rel="noreferrer" aria-label="Link hacia GitHub">
+        <Icon icon={IconCatalog.whatsapp} viewBox="0 0 256 256" />
+      </a>
     </div>
-    <span class="text-center text-gray-300 text-xs font-medium">Copyright © Barranquilla.JS. All rights reserved.</span>
   </div>
+  <span class="text-center text-gray-300 text-xs font-medium">Copyright © Barranquilla.JS. All rights reserved.</span>
 </footer>
