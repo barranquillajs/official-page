@@ -1,29 +1,8 @@
-import pkg from '@apollo/client';
-
-import { client, type EventType, type UserType } from '../utils';
+import eventsModel from 'src/models/events';
+import { client, type EventType, type UserType } from 'src/utils';
 import { getUsersBasic } from './getUsers';
 
-const { gql } = pkg;
-
 export type EventUserComposedType = EventType & { speakersInfo: Array<Pick<UserType, 'id' | 'name' | 'image'>> };
-
-const GetEventsQuery = gql`
-  query GetEvents($limit: Int!) {
-    eventsCollection(limit: $limit, order: date_DESC) {
-      items {
-        name
-        image {
-          url
-        }
-        date
-        place
-        imageBlurUrl
-        speakersId
-        eventLink
-      }
-    }
-  }
-`;
 
 const parseEvents = async (data): Promise<Array<EventUserComposedType>> => {
   if (!data?.eventsCollection?.items) return [];
@@ -41,8 +20,12 @@ const parseEvents = async (data): Promise<Array<EventUserComposedType>> => {
 };
 
 export const getEvents = async (limit = 3) => {
+  if (process.env.NODE_ENV !== 'production') {
+    return parseEvents(eventsModel.GetEventsQueryMocks.data);
+  }
+
   try {
-    const { data } = await client.query({ query: GetEventsQuery, variables: { limit } });
+    const { data } = await client.query({ query: eventsModel.GetEventsQuery, variables: { limit } });
     return await parseEvents(data);
   } catch (error) {
     console.error(error);

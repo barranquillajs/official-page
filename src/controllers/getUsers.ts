@@ -1,39 +1,5 @@
-import pkg from '@apollo/client';
-import { client, type UserType, USER_KIND } from '../utils';
-
-const { gql } = pkg;
-
-const GetUsersBasicQuery = gql`
-  query GetUsersBasic($userIds: [Int]!) {
-    userCollection(where: { id_in: $userIds }) {
-      items {
-        id
-        name
-        image {
-          url
-        }
-        imageBlurUrl
-      }
-    }
-  }
-`;
-
-const GetUsersQuery = gql`
-  query GetUsers($type: String!) {
-    userCollection(where: { type_contains_some: [$type] }) {
-      items {
-        id
-        name
-        image {
-          url
-        }
-        homePage
-        linkedinLink
-        githubLink
-      }
-    }
-  }
-`;
+import usersModel from 'src/models/users';
+import { client, USER_KIND, type UserType } from 'src/utils';
 
 const parseUsers = (data): Array<UserType> => {
   if (!data?.userCollection?.items) return [];
@@ -41,8 +7,12 @@ const parseUsers = (data): Array<UserType> => {
 };
 
 export const getSpeakers = async () => {
+  if (process.env.NODE_ENV !== 'production') {
+    return parseUsers(usersModel.GetSpeakerQueryMocks.data);
+  }
+
   try {
-    const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.SPEAKER } });
+    const { data } = await client.query({ query: usersModel.GetUsersQuery, variables: { type: USER_KIND.SPEAKER } });
     return parseUsers(data);
   } catch (error) {
     console.error(error);
@@ -51,8 +21,12 @@ export const getSpeakers = async () => {
 };
 
 export const getOrganizers = async () => {
+  if (process.env.NODE_ENV !== 'production') {
+    return parseUsers(usersModel.GetOrganizersMocks.data);
+  }
+
   try {
-    const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.ORGANIZER } });
+    const { data } = await client.query({ query: usersModel.GetUsersQuery, variables: { type: USER_KIND.ORGANIZER } });
     return parseUsers(data);
   } catch (error) {
     console.error(error);
@@ -61,8 +35,12 @@ export const getOrganizers = async () => {
 };
 
 export const getUsersBasic = async (userIds: Array<number>) => {
+  if (process.env.NODE_ENV !== 'production') {
+    return parseUsers(usersModel.GetUsersBasicQueryMocks);
+  }
+
   try {
-    const { data } = await client.query({ query: GetUsersBasicQuery, variables: { userIds } });
+    const { data } = await client.query({ query: usersModel.GetUsersBasicQuery, variables: { userIds } });
     return parseUsers(data) as Array<Pick<UserType, 'id' | 'name' | 'image'>>;
   } catch (error) {
     console.error(error);
