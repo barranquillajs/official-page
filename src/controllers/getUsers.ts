@@ -35,17 +35,15 @@ const GetUsersQuery = gql`
   }
 `;
 
-const parseUsers = (data): Array<UserType> => {
+const parseUsers = (data: any): Array<UserType> => {
   if (!data?.userCollection?.items) return [];
   return data.userCollection.items;
 };
 
 export const getSpeakers = async () => {
   try {
-    if (client.isConnected) {
-      const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.SPEAKER } });
-      return parseUsers(data);
-    } else return []
+    const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.SPEAKER } });
+    return parseUsers(data);
   } catch (error) {
     console.error(error);
     return [];
@@ -54,10 +52,8 @@ export const getSpeakers = async () => {
 
 export const getOrganizers = async () => {
   try {
-    if (client.isConnected) {
-      const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.ORGANIZER } });
-        return parseUsers(data);
-    } else return []
+    const { data } = await client.query({ query: GetUsersQuery, variables: { type: USER_KIND.ORGANIZER } });
+    return parseUsers(data);
   } catch (error) {
     console.error(error);
     return [];
@@ -66,10 +62,8 @@ export const getOrganizers = async () => {
 
 export const getUsersBasic = async (userIds: Array<number>) => {
   try {
-    if (client.isConnected) {
-      const { data } = await client.query({ query: GetUsersBasicQuery, variables: { userIds } });
-      return parseUsers(data) as Array<Pick<UserType, 'id' | 'name' | 'image'>>;
-    } else return []
+    const { data } = await client.query({ query: GetUsersBasicQuery, variables: { userIds } });
+    return parseUsers(data) as Array<Pick<UserType, 'id' | 'name' | 'image'>>;
   } catch (error) {
     console.error(error);
     return [];
