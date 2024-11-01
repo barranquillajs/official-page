@@ -21,8 +21,8 @@ const classes = {
 };
 ---
 
-<article class="flex items-center lg:items-end justify-between lg:flex-row flex-col-reverse container px-4 md:px-0 mx-auto lg:my-20">
-  <div class="max-w-2xl lg:max-w-2xl w-full">
+<section class="flex items-center justify-between lg:flex-row flex-col-reverse container px-4 md:px-0 mx-auto lg:my-20">
+  <div class="max-w-[600px] w-full">
     <h1 class="text-5xl md:text-[90px] font-bold md:leading-[97px] text-center lg:text-left">¿Te apasiona Javascript?</h1>
     <p class="font-normal text-base md:leading-10 md:text-2xl my-6">
       Únete a nuestra comunidad de desarrolladores entusiastas, en Barranquilla y la Costa
@@ -52,16 +52,16 @@ const classes = {
         <a class={classes.item} href={LINK_BARRANQUILLA_YOUTUBE} target="_blank" rel="noreferrer" aria-label="Link hacia youtube">
           <Icon icon={IconCatalog.youtube} />
         </a>
+        <a class={classes.item} href={LINK_BARRANQUILLA_GITHUB} target="_blank" rel="noreferrer" aria-label="Link hacia github">
+          <Icon icon={IconCatalog.github} />
+        </a>
         <a class={classes.item} href={LINK_BARRANQUILLA_WHATSAPP} target="_blank" rel="noreferrer" aria-label="Link hacia whatsapp">
           <Icon icon={IconCatalog.whatsapp} viewBox="0 0 256 256" />
-          <a class={classes.item} href={LINK_BARRANQUILLA_GITHUB} target="_blank" rel="noreferrer" aria-label="Link hacia github">
-            <Icon icon={IconCatalog.github} />
-          </a>
         </a>
       </div>
     </div>
-    <div>
-      <Image width={800} height={420} class="rounded-full" src={heroImage} alt="Asistentes del meetup de barranquilla JS" />
-    </div>
   </div>
-</article>
+  <div>
+    <Image width={800} height={420} class="rounded-full" src={heroImage} alt="Asistentes del meetup de barranquilla JS" />
+  </div>
+</section>
