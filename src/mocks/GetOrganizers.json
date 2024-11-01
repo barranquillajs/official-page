@@ -1,0 +1,40 @@
+{
+  "data": {
+    "userCollection": {
+      "items": [
+        {
+          "id": 1,
+          "name": "Alice Smith",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/22.jpg"
+          },
+          "imageBlurUrl": "https://example.com/alice-smith-blur.png"
+        },
+        {
+          "id": 2,
+          "name": "Jack Mendez",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/34.jpg"
+          },
+          "imageBlurUrl": "https://example.com/bob-johnson-blur.png"
+        },
+        {
+          "id": 3,
+          "name": "Harold Fender",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+          },
+          "imageBlurUrl": "https://example.com/bob-johnson-blur.png"
+        },
+        {
+          "id": 4,
+          "name": "Bob Johnson",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/28.jpg"
+          },
+          "imageBlurUrl": "https://example.com/bob-johnson-blur.png"
+        }
+      ]
+    }
+  }
+}

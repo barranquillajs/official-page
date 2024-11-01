@@ -1,0 +1,29 @@
+{
+  "data": {
+    "sponsorsCollection": {
+      "total": 2,
+      "items": [
+        {
+          "name": "Tech Corp",
+          "description": "Leading tech company specializing in innovative solutions.",
+          "logo": {
+            "url": "https://randomuser.me/api/portraits/men/40.jpg"
+          },
+          "logoRaw": "<svg>...</svg>",
+          "url": "https://techcorp.com",
+          "level": "Gold"
+        },
+        {
+          "name": "Health Plus",
+          "description": "Health services provider focused on wellness and fitness.",
+          "logo": {
+            "url": "https://randomuser.me/api/portraits/men/0.jpg"
+          },
+          "logoRaw": "<svg>...</svg>",
+          "url": "https://healthplus.com",
+          "level": "Silver"
+        }
+      ]
+    }
+  }
+}

@@ -1,25 +1,5 @@
-import pkg from '@apollo/client';
-import { client, type SponsorType } from '../utils';
-
-const { gql } = pkg;
-
-const query = gql`
-  query {
-    sponsorsCollection {
-      total
-      items {
-        name
-        description
-        logo {
-          url
-        }
-        logoRaw
-        url
-        level
-      }
-    }
-  }
-`;
+import sponsorsModel from 'src/models/sponsors';
+import { type SponsorType, client } from 'src/utils';
 
 const parseSponsors = (data): Array<SponsorType> => {
   if (!data?.sponsorsCollection?.items) return [];
@@ -27,8 +7,12 @@ const parseSponsors = (data): Array<SponsorType> => {
 };
 
 export const getAllSponsors = async () => {
+  if (process.env.NODE_ENV !== 'production') {
+    return parseSponsors(sponsorsModel.GetSponsorsQueryMocks.data);
+  }
+
   try {
-    const { data } = await client.query({ query });
+    const { data } = await client.query({ query: sponsorsModel.GetSponsorsQuery });
     return parseSponsors(data);
   } catch (error) {
     console.error(error);

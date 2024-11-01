@@ -1,0 +1,65 @@
+{
+  "data": {
+    "eventsCollection": {
+      "items": [
+        {
+          "name": "Tech Conference 2024",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/81.jpg"
+          },
+          "date": "2024-11-15",
+          "place": "New York City",
+          "imageBlurUrl": "https://example.com/tech-conference-2024-blur.png",
+          "speakersId": [
+            1,
+            2,
+            3
+          ],
+          "eventLink": "https://example.com/tech-conference-2024"
+        },
+        {
+          "name": "Innovation Summit",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/76.jpg"
+          },
+          "date": "2024-09-20",
+          "place": "San Francisco",
+          "imageBlurUrl": "https://example.com/innovation-summit-blur.png",
+          "speakersId": [
+            4,
+            5
+          ],
+          "eventLink": "https://example.com/innovation-summit"
+        },
+        {
+          "name": "Innovation Summit",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/76.jpg"
+          },
+          "date": "2024-09-20",
+          "place": "San Francisco",
+          "imageBlurUrl": "https://example.com/innovation-summit-blur.png",
+          "speakersId": [
+            4,
+            5
+          ],
+          "eventLink": "https://example.com/innovation-summit"
+        },
+        {
+          "name": "Innovation Summit",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/76.jpg"
+          },
+          "date": "2024-09-20",
+          "place": "San Francisco",
+          "imageBlurUrl": "https://example.com/innovation-summit-blur.png",
+          "speakersId": [
+            4,
+            5
+          ],
+          "eventLink": "https://example.com/innovation-summit"
+        }
+      ]
+    }
+  }
+}
