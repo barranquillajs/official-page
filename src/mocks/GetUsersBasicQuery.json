@@ -1,0 +1,24 @@
+{
+  "data": {
+    "userCollection": {
+      "items": [
+        {
+          "id": 1,
+          "name": "Alice Smith",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/16.jpg"
+          },
+          "imageBlurUrl": "https://example.com/alice-smith-blur.png"
+        },
+        {
+          "id": 2,
+          "name": "Bob Johnson",
+          "image": {
+            "url": "https://randomuser.me/api/portraits/men/52.jpg"
+          },
+          "imageBlurUrl": "https://example.com/bob-johnson-blur.png"
+        }
+      ]
+    }
+  }
+}
