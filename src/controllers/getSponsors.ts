@@ -21,7 +21,7 @@ const query = gql`
   }
 `;
 
-const parseSponsors = (data): Array<SponsorType> => {
+const parseSponsors = (data: any): Array<SponsorType> => {
   if (!data?.sponsorsCollection?.items) return [];
   return data.sponsorsCollection.items;
 };

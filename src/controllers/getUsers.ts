@@ -1,5 +1,5 @@
 import pkg from '@apollo/client';
-import { client, type UserType, USER_KIND } from '../utils';
+import { client, USER_KIND, type UserType } from '../utils';
 
 const { gql } = pkg;
 
@@ -35,7 +35,7 @@ const GetUsersQuery = gql`
   }
 `;
 
-const parseUsers = (data): Array<UserType> => {
+const parseUsers = (data: any): Array<UserType> => {
   if (!data?.userCollection?.items) return [];
   return data.userCollection.items;
 };
