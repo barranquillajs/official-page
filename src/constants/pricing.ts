@@ -8,12 +8,10 @@ export enum PLANS {
 export const pricingData = [
   {
     title: PLANS.Neutral,
-    price: 'Desde $100.000',
+    price: 'Desde $500.000',
     perks: [
       'Logo grande en la página',
       'Logo en las publicaciones',
-      '10 sillas reservadas en los eventos del meetup',
-      'Publicación de agradecimiento en redes sociales',
       'Espacio de 5 a 10 minutos en los eventos del meetup (charla corta o video)',
       'Repartir stickers de empresa y folletos de información',
       'Compartimos codigo QR o link de promociones o servicios',
