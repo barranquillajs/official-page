@@ -8,7 +8,7 @@ const imageSize = 130;
 
 const classes = {
   imageContainer: cn('flex justify-center'),
-  imageWrapper: cn('flex bg-primary-100 justify-center items-center rounded-full bg-slate-100'),
+  imageWrapper: cn('flex bg-primary-100 justify-center items-center rounded-full bg-slate-100 overflow-hidden'),
   link: cn('p-2'),
   icons: 20,
 };
